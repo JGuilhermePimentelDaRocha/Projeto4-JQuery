@@ -198,6 +198,7 @@ Scroll
 nav {
   background: var(--clr-white);
   padding: 1rem 1.5rem;
+  z-index: 2;
 }
 /* fixed nav */
 .fixed-nav {
@@ -214,6 +215,8 @@ nav {
 .fixed-nav .links a:hover {
   color: var(--clr-secondary);
 }
+
+
 /* .fixed-nav .links-container {
   height: auto !important;
 } */
@@ -302,7 +305,7 @@ nav {
 header {
   min-height: 100vh;
   background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
-    url(img/combate.png) center/cover no-repeat;
+  url('../img/combate.png') center/cover no-repeat;
 }
 .banner {
   min-height: 100vh;
@@ -331,7 +334,7 @@ header {
 .title h2 {
   text-align: center;
   text-transform: uppercase;
-  margin-top: 80px;
+  padding: 80px 0 80px 0;
 }
 
 .title2 h2{
@@ -343,57 +346,183 @@ header {
   color: var(--clr-secondary);
   margin-top: 80px;
 }
-#about{
-height: 180vh;
+#cards{
+height: 60vh;
 }
-#services{
-height: 10vh;
+#prevencao{
+height: 120vh;
 }
-#tours {
-  height: 70vh;
+#galeria {
+  height: 80vh;
 }
-#services {
+#prevencao {
   background: var(--clr-white);
 }
 
 /*
 =============== 
-Animação
+Cards - posicionamento
 ===============
 */
 
-.anime_inicial {
-  opacity: 0;
-  /*esconder*/
-  transform: translate3d(-100px, 0, 0);
-  /* precisa de 3 paramentos  y - altura, x - largura,z - profundidade */
-  transition-duration: 3s;
-  /* duração do evento*/
+#cards{
+  font-family: var(--ff-primary);
+  
 }
 
-.anime_final {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
+.title_cards{
+  margin-top: 5%;
+  text-align: center;
 }
 
-.texto {
-  width: calc(60% - 40px);
+*
+{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-#foto_banner {
-  width: 200px;
-  height: 200px;
+h5
+{
+  margin:0px;
+  font-size:1.4em;
+  font-weight:700;
 }
 
-section.anime_inicial {
-  max-width: 800px;
-  margin: 100px auto;
-
+p
+{
+  font-size:12px;
 }
 
-div.texto {
-  margin: 0 20px;
-  float: left;
+.center
+{
+  height:40vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* cards - efeito  */
+
+.property-card
+{
+  height:18em;
+  width:14em;
+  margin: 50px;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:16px;
+  overflow:hidden;
+  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  
+}
+
+
+.property-image,
+.property-image2,
+.property-image3,
+.property-image4
+
+{
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.property-image{
+  background-image:url('../img/leitos.jpeg');
+}
+
+.property-image2{
+  background-image:url('../img/Vacinacao.jpg');
+}
+
+.property-image3{
+  background-image:url('../img/protoloco.jpg');
+}
+
+.property-image4{
+  background-image:url('../img/Tratamento.jpg');
+}
+
+
+
+/* Bottom Card Section */
+
+.property-description
+{
+  background-color: #FAFAFC;
+  height:12em;
+  width:14em;
+  position:absolute;
+  bottom:0em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align:center;
+}
+
+
+/* Estados de flutuação dos cartões */
+
+.property-card:hover .property-description
+{
+  height:0em;
+  padding:0px 1em;
+}
+.property-card:hover .property-image
+{
+  height:18em;
+}
+
+.property-card:hover .property-image2
+{
+  height:18em;
+}
+
+.property-card:hover .property-image3
+{
+  height:18em;
+}
+
+.property-card:hover .property-image4
+{
+  height:18em;
+}
+
+
+/*Titulo dentro da imagem */
+
+.property-image-title
+{
+text-align: left;
+opacity:0;
+transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+color:var(--clr-black);
+font-size:1.5em;
+}
+
+.property-card:hover .property-image-title
+{
+opacity:1;
 }
 
 
@@ -402,7 +531,12 @@ div.texto {
 Tab
 ===============
 */
+
+.content p {
+  font-size: 16px;
+}
 .about-img {
+  margin-top: 35%;
   margin-bottom: 2rem;
 }
 .about-img img {
@@ -462,12 +596,84 @@ Tab
 /* esconder conteúdo */
 .content {
   display: none;
+  text-align:justify;
 }
 .tab-btn.active {
   background: var(--clr-white);
 }
 .content.active {
   display: block;
+}
+
+/*
+=============== 
+carrossel
+===============
+*/
+
+.carrossel{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  background: pr;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+.slider::before, .slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
 }
 
 /*

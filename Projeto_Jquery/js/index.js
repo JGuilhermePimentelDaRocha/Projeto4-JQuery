@@ -78,31 +78,6 @@ $(document).ready(function () {
         });
     });
 
-    // fadeToggle
-    $("#btn1").click(function () {
-        $("#minhaDiv1").fadeToggle("slow");
-        $("#minhaDiv1").fadeToggle("slow");
-        $("#minhaDiv1").fadeToggle("slow");
-        $("#minhaDiv1").fadeToggle("slow");
-
-    })
-
-    $("#btn2").click(function () {
-        $("#minhaDiv2").fadeToggle("slow");
-        $("#minhaDiv2").fadeToggle("slow");
-        $("#minhaDiv2").fadeToggle("slow");
-        $("#minhaDiv2").fadeToggle("slow");
-
-    })
-
-    $("#btn3").click(function () {
-        $("#minhaDiv3").fadeToggle("slow");
-        $("#minhaDiv3").fadeToggle("slow");
-        $("#minhaDiv3").fadeToggle("slow");
-        $("#minhaDiv3").fadeToggle("slow");
-
-    })
-
     //tab
 
     const about = document.querySelector(".about");
@@ -125,25 +100,14 @@ $(document).ready(function () {
         }
     });
 
-    // animação
+    //carrossel
 
+    $('.carousel').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 4
+    });
 
-    function animeScroll() {
-        var disTopoScroll = $(document).scrollTop();
-        console.log(disTopoScroll);
-        $(".anime_inicial").each(function () {
-            itemTopo = $(this).offset().top
-            console.log(itemTopo);
-            if (disTopoScroll > itemTopo - 150) {
-                $(this).addClass("anime_final");
-            } else {
-                $(this).removeClass("anime_final");
-            }
-        })
-    }
-    animeScroll();
-    $(window).scroll(function () {
-        animeScroll();
-    })
 });
 
