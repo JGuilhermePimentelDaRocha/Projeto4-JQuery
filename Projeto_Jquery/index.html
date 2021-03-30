@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Informativo Coronavírus</title>
     <!-- font-->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
     <!-- stilo -->
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="css/index.css" />
 
 </head>
 
@@ -20,7 +24,7 @@
             <div class="nav-center">
                 <!-- logo e navegador-->
                 <div class="nav-header">
-                    <img src="../Nova pasta/img/cara.png" class="logo" alt="logo" />
+                    <img src="img/cara.png" class="logo" alt="logo" />
                     <button class="nav-toggle">
                         <i class="fas fa-bars"></i>
                     </button>
@@ -32,13 +36,13 @@
                             <a href="#home" class="scroll-link">home</a>
                         </li>
                         <li>
-                            <a href="#about" class="scroll-link">Nossos Sabores</a>
+                            <a href="#cards" class="scroll-link">Ocupações de Leitos</a>
                         </li>
                         <li>
-                            <a href="#services" class="scroll-link">Serviços</a>
+                            <a href="#prevencao" class="scroll-link">Vacinas</a>
                         </li>
                         <li>
-                            <a href="#tours" class="scroll-link">Contato</a>
+                            <a href="#galeria" class="scroll-link">Quem Somos</a>
                         </li>
                     </ul>
                 </div>
@@ -50,149 +54,267 @@
                 <h1>Informativo Coronavírus</h1>
                 <p>
                 </p>
-                <a href="#about" class="scroll-link btn btn-white">Veja nossos sabores</a>
-                <a href="#services" class="scroll-link btn btn-white">Serviços</a>
-                <a href="#tours" class="scroll-link btn btn-white">Contato</a>
+                <a href="#cards" class="scroll-link btn btn-white">Informações </a>
+                <a href="#prevencao" class="scroll-link btn btn-white">Como se previnir </a>
+                <a href="#galeria" class="scroll-link btn btn-white">Protocolos e tratamentos </a>
             </div>
         </div>
     </header>
-    <!-- about -->
+    <!-- Cards -->
 
-    <section id="about">
+    <section id="cards">
 
-        <center>
+        <div class="title_cards">
             <h1>Informações</h1>
-        </center>
-        <section class="anime_inicial">
-            <div class="texto">
-                <h2>SoulCode Academy</h2>
-                <p>Uma Edtech brasileira, somos uma escola de educação não formal e inclusão digital, de metodologia
-                    ágil,
-                    com a missão de gerar impacto social, através da capacitação tecnológica, com foco em diversidade,
-                    equalidade e empregabilidade.</p>
-            </div>
-            <div>
-                <img src="../Nova pasta/img/covid_19_2.jpg" alt="img1" id="foto_banner">
-            </div>
-        </section>
-        <br>
+        </div>
 
-        <section class="anime_inicial">
-            <div class="texto">
-                <h2>TNT Energy Drink</h2>
-                <p>Uma parceria que diz muito sobre nós: SoulCode Academy + TNT Energy Drink! É necessário muita energia
-                    e
-                    muita resistência para codar. E aí, quem vem?</p>
+        <div class="center">
+            <div class="property-card">
+                <a href="#">
+                    <div class="property-image">
+                        <div class="property-image-title">
+                            Saiba Mais
+                        </div>
+                    </div>
+                </a>
+                <div class="property-description">
+                    <h5> Ocupação de Leitos e Bandeira Vigente </h5>
+
+                </div>
             </div>
-            <div>
-                <img src="../Nova pasta/img/covid_19_2.jpg" alt="img2" id="foto_banner">
+
+            <div class="property-card">
+                <a href="#">
+                    <div class="property-image2">
+                        <div class="property-image-title">
+                            Saiba Mais
+                        </div>
+                    </div>
+                </a>
+                <div class="property-description">
+                    <h5> Vacinas Emergenciais </h5>
+
+                </div>
+
             </div>
-        </section>
-        <br>
+
+            <div class="property-card">
+                <a href="#">
+                    <div class="property-image3">
+                        <div class="property-image-title">
+                            Saiba Mais
+                        </div>
+                    </div>
+                </a>
+                <div class="property-description">
+                    <h5> Protocolo de Combate adotados </h5>
+
+                </div>
+
+            </div>
 
 
-        <section class="anime_inicial">
-            <div class="texto">
-                <h2>Web Full Stack</h2>
-                <p>o desenvolvedor full stack é o profissional habilitado para compreender e operar em todas as camadas
-                    do
-                    desenvolvimento de um projeto, desde a criação de servidores internos até interfaces de comunicação
-                    com
-                    o usuário final.</p>
-            </div>
-            <div>
-                <img src="../Nova pasta/img/covid_19_2.jpg" alt="img3" id="foto_banner">
-            </div>
-        </section>
-        <br>
+            <div class="property-card">
+                <a href="#">
+                    <div class="property-image4">
+                        <div class="property-image-title">
+                            Saiba Mais
+                        </div>
+                    </div>
+                </a>
+                <div class="property-description">
+                    <h5> Tecnicas de Tratamento e Novos medicamentos </h5>
 
+                </div>
+            </div>
+
+        </div>
 
 
 
     </section>
 
-    <!-- services -->
+    <!-- Prevenção-->
 
-    <section id="services" class="section">
-
-
-    </section>
-
-    <section id="tours" class="section">
+    <section id="prevencao" class="section">
 
         <div class="title">
-            <h2>Informativo Coronavírus</h2>
+            <h2>Como se Prevenir</h2>
+        </div>
+
+        <!-- video -->
+        <div class="about-center section-center">
+            <article class="about-img">
+                <iframe width="500" height="300" src="https://www.youtube.com/embed/t4Yyf-cEJfM"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+            </article>
+            <article class="about">
+                <!-- btn container -->
+                <div class="btn-container">
+                    <button class="tab-btn" data-id="vision">Prevenção</button>
+                    <button class="tab-btn active" data-id="history">Sintomas</button>
+                    <button class="tab-btn" data-id="goals">Tratamentos</button>
+                </div>
+                <div class="about-content">
+                    <!-- item 1 -->
+                    <div class="content" id="vision">
+                        <h4>Prevenção</h4>
+                        <p>Proteja a si mesmo e as pessoas ao seu redor conhecendo os fatos e tomando as precauções
+                            apropriadas. Siga os conselhos da autoridade local de saúde.</p><br>
+                        <p>Para evitar a propagação da COVID-19, faça o seguinte:</p>
+                        <lu>
+                            <li>Lave suas mãos com frequência. Use sabão e água ou álcool em gel.</li>
+                            <li>Mantenha uma distância segura de pessoas que estiverem tossindo ou espirrando.</li>
+                            <li>Use máscara quando não for possível manter o distanciamento físico.</li>
+                            <li>Não toque nos olhos, no nariz ou na boca.</li>
+                            <li>Cubra seu nariz e boca com o braço dobrado ou um lenço ao tossir ou expirar.</li>
+                            <li>Fique em casa se você se sentir indisposto.</li>
+                            <li>Procure atendimento médico se tiver febre, tosse e dificuldade para respirar.</li><br>
+                            <p>Ligue com antecedência para o plano ou órgão de saúde e peça direcionamento à unidade
+                                mais adequada. Isso protege você e evita a propagação de vírus e outras infecções.
+                            </p>
+
+
+                        </lu>
+
+                    </div>
+
+                    <!-- item 2-->
+                    <div class="content active" id="history">
+
+                        <h4>Sintomas</h4>
+                        <p>
+                            A COVID-19 afeta diferentes pessoas de diferentes maneiras. A maioria das pessoas infectadas
+                            apresentará sintomas leves a moderados da doença e não precisarão ser hospitalizadas.
+                        </p><br>
+                        <lu>Sintomas mais comuns:
+                            <li>febre</li>
+                            <li>tosse seca</li>
+                            <li>cansaço</li>
+                        </lu><br>
+                        <lu>Sintomas menos comuns:
+                            <li>dores e desconfortos</li>
+                            <li>dor de garganta</li>
+                            <li>diarreia</li>
+                            <li>conjuntivite</li>
+                            <li>dor de cabeça</li>
+                            <li>perda de paladar ou olfato</li>
+                            <li>erupção cutânea na pele ou descoloração dos dedos das mãos ou dos pés</li>
+                        </lu><br>
+
+                        <lu>Sintomas graves:
+                            <li>dificuldade de respirar ou falta de ar</li>
+                            <li>dor ou pressão no peito</li>
+                            <li>perda de fala ou movimento</li>
+                        </lu><br>
+                        <p>Procure atendimento médico imediato se tiver sintomas graves. Sempre ligue antes de ir ao
+                            médico ou posto de saúde, clínicas ou hospitais.</p>
+                    </div>
+
+                    <!-- item 3-->
+                    <div class="content" id="goals">
+                        <h4>Tratamentos</h4>
+                        <p>Autocuidados</p>
+                        <p>Após a exposição a uma pessoa com COVID-19, siga estas orientações:</p>
+                        <lu>
+                            <li>Ligue para seu prestador de cuidados de saúde ou para uma central de informações sobre a
+                                doença para descobrir onde e quando você pode fazer um teste.</li>
+                            <li>Informe outras pessoas com quem você teve contato para impedir a propagação do vírus.
+                            </li>
+                            <li>Caso não seja possível fazer o teste, fique em casa e pratique o distanciamento social
+                                por 14 dias.</li>
+                            <li>Enquanto estiver em quarentena, não vá ao trabalho, à escola ou a espaços públicos. Peça
+                                para alguém levar itens essenciais até você.</li>
+                            <li>Mantenha pelo menos um metro de distância de outras pessoas, incluindo membros da sua
+                                família.</li>
+                            <li></li>
+                            <li>
+                                Use uma máscara para proteger os outros, até mesmo se/quando você precisar procurar
+                                atendimento médico.
+                            </li>
+                            <li>
+                                Higienize as mãos com frequência.
+                            </li>
+                            <li>Fique em um cômodo separado dos outros membros da sua família. Se isso não for possível,
+                                use máscara.</li>
+                            <li>Mantenha o ambiente bem ventilado.</li>
+                            <li>Se você divide o quarto com alguém, deixe um metro de distância entre as camas.</li>
+                            <li>Preste atenção por 14 dias para ver se você apresenta sintomas.</li>
+                            <li>Ligue para o prestador de cuidados de saúde imediatamente se você apresentar qualquer um
+                                destes sintomas: dificuldade para respirar, perda da fala ou da mobilidade, confusão ou
+                                dores no peito.</li>
+                            <li>Mantenha contato com seus entes queridos por telefone ou on-line e faça exercícios para
+                                manter o pensamento positivo.</li>
+                        </lu>
+
+                    </div>
+                </div>
+            </article>
+        </div>
+
+
+
+    </section>
+
+    <section id="galeria" class="section">
+
+        <div class="title">
+            <h2>Galeria</h2>
             <p>
 
             </p>
         </div>
 
-        <div class="about-center section-center">
-            <article class="about-img">
-                <img src="../Nova pasta/img/covid_19.jpg" alt="" />
-            </article>
-            <article class="about">
-                <!-- btn container -->
-                <div class="btn-container">
-                    <button class="tab-btn active" data-id="history">history</button>
-                    <button class="tab-btn" data-id="vision">vision</button>
-                    <button class="tab-btn" data-id="goals">goals</button>
+        <div class="carrossel">
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                        <img src="img/leitos.jpeg" height="300" width="550" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/Tratamento.jpg" height="300" width="550" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/Vacinacao.jpg" height="300" width="550" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/protoloco.jpg" height="300" width="550" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/leitos.jpeg" height="300" width="550" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/Tratamento.jpg" height="300" width="550" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/Vacinacao.jpg" height="300" width="550" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/protoloco.jpg" height="300" width="550" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/leitos.jpeg" height="300" width="550" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/Tratamento.jpg" height="300" width="550" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/Vacinacao.jpg" height="400" width="550" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/protoloco.jpg" height="400" width="550" alt="" />
+                    </div>
+
+
                 </div>
-                <div class="about-content">
-                    <!-- single item -->
-                    <div class="content active" id="history">
-                        <h4>history</h4>
-                        <p>
-                            I'm baby wolf pickled schlitz try-hard normcore marfa man bun
-                            mumblecore vice pop-up XOXO lomo kombucha glossier bicycle
-                            rights. Umami kinfolk salvia jean shorts offal venmo. Knausgaard
-                            tilde try-hard, woke fixie banjo man bun. Small batch tumeric
-                            mustache tbh wayfarers 8-bit shaman chartreuse tacos. Viral
-                            direct trade hoodie ugh chambray, craft beer pork belly flannel
-                            tacos single-origin coffee art party migas plaid pop-up.
-                        </p>
-                    </div>
-                    <!-- end of single item -->
-                    <!-- single item -->
-                    <div class="content" id="vision">
-                        <h4>vision</h4>
-                        <p>
-                            Man bun PBR&B keytar copper mug prism, hell of helvetica. Synth
-                            crucifix offal deep v hella biodiesel. Church-key listicle
-                            polaroid put a bird on it chillwave palo santo enamel pin,
-                            tattooed meggings franzen la croix cray. Retro yr aesthetic four
-                            loko tbh helvetica air plant, neutra palo santo tofu mumblecore.
-                            Hoodie bushwick pour-over jean shorts chartreuse shabby chic.
-                            Roof party hammock master cleanse pop-up truffaut, bicycle
-                            rights skateboard affogato readymade sustainable deep v
-                            live-edge schlitz narwhal.
-                        </p>
-                        <ul>
-                            <li>list item</li>
-                            <li>list item</li>
-                            <li>list item</li>
-                        </ul>
-                    </div>
-                    <!-- end of single item -->
-                    <!-- single item -->
-                    <div class="content" id="goals">
-                        <h4>goals</h4>
-                        <p>
-                            Chambray authentic truffaut, kickstarter brunch taxidermy vape
-                            heirloom four dollar toast raclette shoreditch church-key.
-                            Poutine etsy tote bag, cred fingerstache leggings cornhole
-                            everyday carry blog gastropub. Brunch biodiesel sartorial mlkshk
-                            swag, mixtape hashtag marfa readymade direct trade man braid
-                            cold-pressed roof party. Small batch adaptogen coloring book
-                            heirloom. Letterpress food truck hammock literally hell of wolf
-                            beard adaptogen everyday carry. Dreamcatcher pitchfork yuccie,
-                            banh mi salvia venmo photo booth quinoa chicharrones.
-                        </p>
-                    </div>
-                    <!-- end of single item -->
-                </div>
-            </article>
+            </div>
         </div>
+
+
+
 
     </section>
 
@@ -208,11 +330,13 @@
         <i class="fas fa-arrow-up"></i>
     </a>
     <!-- javascript -->
-    <script src="./js/index.js"></script>
+
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
+
+
 </body>
 
 </html>
