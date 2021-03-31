@@ -9,10 +9,10 @@
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/footer/footer.css">
   <link rel="icon" href="../img/cara.png" />
-  <link rel="stylesheet" href="./js/jquery-ui-1.12.1/jquery-ui.min.css">
+  <link rel="stylesheet" href="../js/jquery-ui-1.12.1/jquery-ui.min.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
+
 
   <title>Formulário de Vacinação</title>
 </head>
@@ -50,22 +50,46 @@
 
   <main>
     <section id="form">
-   
-        <div id="progressbar"></div>
+
 
       <h3 class="tituloSection">Dados Pessoais</h3>
 
       <section class="box dadosPessoais">
         <div class="boxAdicional">
-          <label for="nome">Nome </label>
-          <input class="progresso" type="text" placeholder="Nome completo" id="nome">
-          <label for="dataNascimento">Data de nascimento </label>
-          <input class="progresso" type="date" id="dataNascimento">
+          <div>
+            <label for="nome">Nome </label>
+            <input class="progress" type="text" placeholder="Nome completo" id="nome">
+          </div>
+          <div>
+            <label for="dataNascimento">Nascimento </label>
+            <input class="progress" type="date" id="dataNascimento">
+          </div>
+
+          <div>
+            <label for="cartaoSus">Cartão do SUS </label>
+            <input class="progress" type="text" id="cartaoSus" placeholder="apenas números">
+          </div>
+          <div>
+            <label for="cpf">CPF </label>
+            <input class="progress" type="text" id="cpf" placeholder="somente os números">
+          </div>
         </div>
         <div class="boxAdicional">
           <div>
-            <label for="etnia">Etnia</label>
-            <select class="progresso" name="etnia" id="etnia">
+            <label for="profissao">Profissão </label>
+            <select class="progress" name="profissao" id="profissao">
+              <option value="" disabled selected>Selecione</option>
+              <option value="profissionalSaude">Profissional da Saúde</option>
+              <option value="professor">Professor</option>
+              <option value="forcasSeguranca">Forças da Segurança e Salvamento</option>
+              <option value="funcionariosSisPrisional">Profissional do Sistema Prisional</option>
+              <option value="outros">Outros (informe ao lado)</option>
+            </select>
+            <input id="outros" placeholder="para 'outros', informe aqui">
+          </div>
+          <div>
+            <label for="etnia">Etnia </label>
+            <select class="progress" name="etnia" id="etnia">
               <option value="" disabled selected>Selecione</option>
               <option value="amarelo">Amarelo(a)</option>
               <option value="branco">Branco(a)</option>
@@ -75,110 +99,74 @@
               <option value="naoInformado">Não informado</option>
             </select>
           </div>
-          <div id="boxSexo">
-            <h4 class="tituloSecundario">Sexo</h4>
-            <input class="inputSexo" name="sexo" type="radio" id="feminino" value="feminino">
-            <label for="feminino">Feminino</label>
-            <input class="inputSexo" name="sexo" type="radio" id="masculino" value="masculino">
-            <label for="masculino">Masculino</label>
-            <input class="inputSexo" name="sexo" type="radio" id="naoInformado" value="naoInformado">
-            <label for="naoInformado">Não Informado</label>
+          <div>
+            <label for="sexo">Sexo </label>
+            <select class="progress" name="sexo" id="sexo">
+              <option value="" disabled selected>Selecione</option>
+              <option value="feminino">Feminino</option>
+              <option value="masculino">Masculino</option>
+              <option value="naoInformado">Não Informado</option>
+            </select>
           </div>
           <div id="gestacao">
-            <h4 class="tituloSecundario">Está gestante?</h4>
-            <input class="progresso" type="radio" id="gestante" value="gestante">
-            <label for="gestante">Sim</label>
-            <input class="progresso" type="radio" id="naoGestante" value="naoGestante">
-            <label for="naoGestante">Não</label>
+            <label for="gestante">Gestação </label>
+            <select name="gestante" id="gestante">
+              <option value="" disabled selected>Selecione</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
           </div>
         </div>
         <div class="boxAdicional">
           <div>
-            <label for="cpf">CPF </label>
-            <input class="progresso" type="text" id="cpf" placeholder="somente os números">
+            <label for="peso">Peso </label>
+            <input class="progress" type="number" name="peso" id="peso" placeholder="informe seu peso">
           </div>
           <div>
-            <label for="cartaoSus">Cartão do SUS </label>
-            <input class="progresso" type="number" id="cartaoSus" placeholder="xxxxxxxxxxxxxxx">
+            <label for="altura">Altura </label>
+            <input class="progress" type="number" name="altura" id="altura" placeholder="informe sua altura">
           </div>
           <div>
-            <label for="profissao">Profissão</label>
-            <input class="progresso" id="profissao">
+            <label for="imc">IMC </label>
+            <input type="text" name="imc" id="imc" placeholder="seu imc irá aparecer aqui" readonly>
           </div>
         </div>
 
-        <div>
-          <label for="sangue">Tipo Sanguíneo: </label>
-          <select class="progresso" name="sangue" id="sangue">
-            <option value="" disabled selected>Selecione</option>
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="AB">AB</option>
-            <option value="O">O</option>
-            <option value="naoInformado">Não informado</option>
-          </select>
-        </div>
-        <div>
-          <label for="rh">Fator RH: </label>
-          <select class="progresso" id="rh">
-            <option value="" disabled selected>Selecione</option>
-            <option value="positivo">Positivo</option>
-            <option value="negativo">Negativo</option>
-          </select>
-        </div>
-        <div>
-          <label for="peso">Peso</label>
-          <input class="progresso" type="number" name="peso" id="peso">
-        </div>
-        <div>
-          <label for="altura">Altura</label>
-          <input class="progresso" type="number" name="altura" id="altura">
-        </div>
-        <div>
-          <label for="imc">IMC</label>
-          <input type="text" name="imc" id="imc" readonly>
-        </div>
       </section>
 
-      <h3 class="tituloSection">Endereço</h3>
+      <h3 class="tituloSection">Endereço e Contato</h3>
 
-      <section class="box endereco">
-        <div>
-          <label for="rua">Endereço</label>
-          <input class="progresso" type="text" id="rua" placeholder="Rua, número e complemento">
+      <section class="box enderecoEContato">
+        <div class="boxAdicional">
+          <div>
+            <label for="rua">Endereço</label>
+            <input class="progress" type="text" id="rua" placeholder="Rua, número e complemento">
+          </div>
+          <div>
+            <label for="bairro">Bairro </label>
+            <input class="progress" id="bairro">
+          </div>
+          <div>
+            <label for="cep">CEP: </label>
+            <input class="progress" type="text" id="cep" pattern="\d{5}\-d{3}$" placeholder="xxxxx-xxx">
+          </div>
         </div>
-        <div>
-          <label for="bairro">Bairro </label>
-          <input class="progresso" id="bairro">
-        </div>
-        <div>
-          <label for="cep">CEP: </label>
-          <input class="progresso" type="text" id="cep" pattern="\d{5}\-d{3}$" placeholder="xxxxx-xxx">
+        <div class="boxAdicional">
+          <div>
+            <label for="telefone">Telefone: </label>
+            <input class="progress" type="tel" pattern="^\d{2}-\d{5}-\d{4}$" id="telefone" placeholder="xx-xxxxx-xxxx">
+          </div>
+          <div>
+            <label for="email">E-mail: </label>
+            <input class="progress" type="email" id="email" placeholder="seuemail@dominio.com">
+          </div>
         </div>
       </section>
-
-      <h3 class="tituloSection">Contato</h3>
-
-      <section class="box contato">
-        <div>
-          <label for="telefone">Telefone: </label>
-          <input class="progresso" type="tel" pattern="^\d{2}-\d{5}-\d{4}$" id="telefone" placeholder="xx-xxxxx-xxxx">
-        </div>
-        <div>
-          <label for="email">E-mail: </label>
-          <input class="progresso" type="email" id="email" placeholder="seuemail@dominio.com">
-        </div>
-        <div>
-          <label for="telefone">Contato de Emergência</label>
-          <input class="progresso" type="tel" pattern="^\d{2}-\d{5}-\d{4}$" id="telefoneEmergencia" placeholder="xx-xxxxx-xxxx">
-        </div>
-      </section>
-
       <h3 class="tituloSection">Vacinas e comorbidades</h3>
 
       <section class="box vacinas">
         <div>
-          <label for="vacinas">Vacinas Aplicadas </label>
+          <h4 class="tituloSecundario">Vacinas Aplicadas </h4>
           <div>
             <input type="checkbox" name="febreAmarela" id="febreAmarela">
             <label for="febreAmarela">Febre Amarela</label>
@@ -199,25 +187,53 @@
             <input type="checkbox" name="hepatiteB" id="hepatiteB">
             <label for="hepatiteB">Hepatite B</label>
           </div>
+          <div>
+            <input type="checkbox" name="zeroVacinas" id="zeroVacinas">
+            <label for="zeroVacinas">Nunca tomei vacina</label>
+          </div>
 
         </div>
         <div>
-          <label for="comorbidades">Comorbidades </label>
+          <h4 class="tituloSecundario">Comorbidades</h4>
           <div>
             <input type="checkbox" name="hipertensao" id="hipertensao">
-            <label for="hipertensao">Hipertensão</label>
+            <label for="hipertensao">Hipertensão Grave</label>
           </div>
           <div>
             <input type="checkbox" name="diabetes" id="diabetes">
-            <label for="diabetes">Diabetes</label>
+            <label for="diabetes">Diabetes Mellitus</label>
           </div>
           <div>
             <input type="checkbox" name="doencaCardio" id="doencaCardio">
-            <label for="doencaCardio">Doença Cardiovascular Crônica</label>
+            <label for="doencaCardio">Doença Cardiovascular ou CerebroVascular</label>
+          </div>
+          <div>
+            <input type="checkbox" name="doencaPulmonar" id="doencaPulmonar">
+            <label for="doencaPulmonar">Doença Pulmonar Obstrutiva Crônica</label>
+          </div>
+          <div>
+            <input type="checkbox" name="doencaRenal" id="doencaRenal">
+            <label for="doencaRenal">Doença Renal</label>
+          </div>
+          <div>
+            <input type="checkbox" name="transplanteOrgao" id="transplanteOrgao">
+            <label for="transplanteOrgao">Indivíduos Transplantados de Órgão Sólido</label>
+          </div>
+          <div>
+            <input type="checkbox" name="anemiaFalciforme" id="anemiaFalciforme">
+            <label for="anemiaFalciforme">Anemia Falciforme</label>
+          </div>
+          <div>
+            <input type="checkbox" name="cancer" id="cancer">
+            <label for="cancer">Câncer</label>
           </div>
           <div>
             <input type="checkbox" name="obesidade" id="obesidade">
-            <label for="obesidade">Obesidade</label>
+            <label for="obesidade">Obesidade Grave</label>
+          </div>
+          <div>
+            <input type="checkbox" name="zeroDoenca" id="zeroDoenca">
+            <label for="zeroDoenca">Não possuo comorbidades</label>
           </div>
           <div>
             <input type="checkbox" name="outrasDoencas" id="outrasDoencas">
@@ -230,17 +246,21 @@
           <textarea>Anotações adicionais</textarea>
         </div>
       </section>
-
-
-      <button id="btnEnviar">Enviar dados</button>
-
+      <div id="containerProgressbar">
+        <div id="progressbar"></div>
+      </div>
+      <div id="divBotao">
+        <button id="btnEnviar">Enviar dados</button>
+      </div>
     </section>
 
-    <section id="bloco_confirmacao">
+
+    <section id="blocoConfirmacao">
       <div id="boxConfirmacao">
         <p id="confirmacaoDados"></p>
       </div>
     </section>
+
   </main>
 
   <!-- footer -->
