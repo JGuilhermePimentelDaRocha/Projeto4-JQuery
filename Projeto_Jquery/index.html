@@ -25,7 +25,11 @@
             <div class="nav-center">
                 <!-- logo e navegador-->
                 <div class="nav-header">
-                    <img src="img/cara.png" class="logo" alt="logo" />
+                    <ul class="links">
+                        <li>
+                            <a class="scroll-link" id="dateTime"></a>
+                        </li>
+                    </ul>
                     <button class="nav-toggle">
                         <i class="fas fa-bars"></i>
                     </button>
@@ -34,16 +38,20 @@
                 <div class="links-container">
                     <ul class="links">
                         <li>
-                            <a href="#home" class="scroll-link">home</a>
+                            <a href="index.html" class="scroll-link">home</a>
                         </li>
                         <li>
-                            <a href="#cards" class="scroll-link">Ocupações de Leitos</a>
+                            <a href="infoVacinas/infovacina.html" class="scroll-link">Vacinas e Ocupações de Leitos</a>
                         </li>
                         <li>
-                            <a href="#prevencao" class="scroll-link">Vacinas</a>
+                            <a href="quemSomos/quemSomos.html" class="scroll-link">Quem Somos</a>
                         </li>
                         <li>
-                            <a href="#galeria" class="scroll-link">Quem Somos</a>
+                            <!-- acessibilidade visual -->
+                            <button name="increase-font" id="increase-font"
+                                title="Aumentar fonte"><strong>A+</strong></button>
+                            <button name="decrease-font" id="decrease-font"
+                                title="Diminuir fonte"><strong>A-</strong></button>
                         </li>
                     </ul>
                 </div>
@@ -53,11 +61,13 @@
         <div class="banner">
             <div class="container">
                 <h1>Informativo Coronavírus</h1>
+                <h3 id="SubtittleBaneer">Conteúdos sobre covid-19 para a Cidade de São Paulo</h3>
                 <p>
                 </p>
                 <a href="#cards" class="scroll-link btn btn-white">Informações </a>
                 <a href="#prevencao" class="scroll-link btn btn-white">Como se previnir </a>
-                <a href="#galeria" class="scroll-link btn btn-white">Protocolos e tratamentos </a>
+                <a href="infoVacinas/infovacina.html" class="scroll-link btn btn-white">Vacinas e Ocupações de Leitos
+                </a>
             </div>
         </div>
     </header>
@@ -71,7 +81,7 @@
 
         <div class="center">
             <div class="property-card">
-                <a href="#">
+                <a href="infoVacinas/infovacina.html">
                     <div class="property-image">
                         <div class="property-image-title">
                             Saiba Mais
@@ -85,7 +95,7 @@
             </div>
 
             <div class="property-card">
-                <a href="#">
+                <a href="infoVacinas/infovacina.html">
                     <div class="property-image2">
                         <div class="property-image-title">
                             Saiba Mais
@@ -100,7 +110,7 @@
             </div>
 
             <div class="property-card">
-                <a href="#">
+                <a href="#prevencao">
                     <div class="property-image3">
                         <div class="property-image-title">
                             Saiba Mais
@@ -116,7 +126,7 @@
 
 
             <div class="property-card">
-                <a href="#">
+                <a href="#prevencao">
                     <div class="property-image4">
                         <div class="property-image-title">
                             Saiba Mais
@@ -162,7 +172,7 @@
                 <div class="about-content">
                     <!-- item 1 -->
                     <div class="content" id="vision">
-                        <h4>Prevenção</h4>
+                        <h4>Protocolo de Combate adotados </h4>
                         <p>Proteja a si mesmo e as pessoas ao seu redor conhecendo os fatos e tomando as precauções
                             apropriadas. Siga os conselhos da autoridade local de saúde.</p><br>
                         <p>Para evitar a propagação da COVID-19, faça o seguinte:</p>
@@ -217,7 +227,7 @@
 
                     <!-- item 3-->
                     <div class="content" id="goals">
-                        <h4>Tratamentos</h4>
+                        <h4>Tecnicas de Tratamento</h4>
                         <p>Autocuidados</p>
                         <p>Após a exposição a uma pessoa com COVID-19, siga estas orientações:</p>
                         <lu>
