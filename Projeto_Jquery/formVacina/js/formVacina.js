@@ -1,4 +1,7 @@
-$('#gestacao').hide()
+$(document).ready(function () {
+  $('#gestacao, #boxConfirmacao').hide()
+})
+
 
 /* Validação nome quantidade de caracteres*/
 
@@ -27,9 +30,9 @@ $('#dataNascimento').blur(function () { // requisito jQuery método de evento bl
 
 $('#sexo').blur(function () { // requisito jQuery método de evento blur()
   if ($('#sexo').val() == 'feminino') {
-    $('#gestacao').show()
+    $('#gestacao').slideDown(); // requisito jQuery slide
   } else {
-    $('#gestacao').hide()
+    $('#gestacao').slideUp(); // requisito jQuery slide
   }
 })
 
@@ -234,37 +237,47 @@ const checkFields = () => {
   /* Envia as informações do formulário para uma box */
 
   $('#btnEnviar').click(function () { // requisito jQuery método de evento click()
-    
+
     let idade = 2021 - parseFloat(dataNascimento.val())
     if (barWidth == 100) {
       if ($('#profissao').val() == 'profissionalSaude' || idade >= 75) {
+        $('#boxConfirmacao').fadeIn('slow')
         $('#confirmacaoDados').html("Você faz parte do grupo 1 e já pode se vacinar")
 
       } else if ($('#etnia').val() == 'indigena' && idade >= 18) {
+        $('#boxConfirmacao').fadeIn('slow')
+
         $('#confirmacaoDados').html("Você faz parte do grupo 1 e já pode se vacinar")
 
       } else if (idade >= 60) {
+        $('#boxConfirmacao').fadeIn('slow')
+
         $('#confirmacaoDados').html("Você faz parte do grupo 2 e já pode se vacinar")
 
       } else if (idade >= 18) {
-        if ($('#hipertensao').is(':checked') || $('#hipertensao').is(':checked') ||
-          $('#hipertensao').is(':checked') || $('#hipertensao').is(':checked') ||
-          $('#hipertensao').is(':checked') || $('#hipertensao').is(':checked') ||
-          $('#hipertensao').is(':checked') || $('#hipertensao').is(':checked')) {
-
+        if ($('#hipertensao').is(':checked') || $('#diabetes').is(':checked') ||
+          $('#doencaCardio').is(':checked') || $('#doencaPulmonar').is(':checked') ||
+          $('#doencaRenal').is(':checked') || $('#transplanteOrgao').is(':checked') ||
+          $('#anemiaFalciforme').is(':checked') || $('#cancer').is(':checked') || 
+          $('#obesidade').is(':checked')) {
+         
+          $('#boxConfirmacao').fadeIn('slow')
           $('#confirmacaoDados').html("Você faz parte do grupo 3 e já pode se vacinar")
 
         } else {
+          $('#boxConfirmacao').fadeIn('slow')
           $('#confirmacaoDados').html("Você deve aguardar para a vacinação, acompanhe nosso site para mais informações")
         }
       } else if ($('#profissao').val() != 'outros' && $('#profissao').val() != 'profissionalSaude') {
+        $('#boxConfirmacao').fadeIn('slow')
         $('#confirmacaoDados').html("Você faz parte do grupo 4 e já pode se vacinar")
 
       } else {
+        $('#boxConfirmacao').fadeIn('slow')
         $('#confirmacaoDados').html("Você deve aguardar para a vacinação, acompanhe nosso site para mais informações")
       }
-
     } else {
+      $('#boxConfirmacao').fadeIn('slow').addClass('erro')
       $('#confirmacaoDados').html("Você precisa preencher todos os campos")
     }
 
