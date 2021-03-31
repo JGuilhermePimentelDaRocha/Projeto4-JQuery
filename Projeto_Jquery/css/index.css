@@ -375,7 +375,7 @@ header {
 height: 60vh;
 }
 #prevencao{
-height: 120vh;
+height: 140vh;
 }
 #galeria {
   height: 80vh;
@@ -590,12 +590,12 @@ Tab
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .tab-btn:nth-child(1) {
   border-top-left-radius: var(--radius);
 }
-.tab-btn:nth-child(3) {
+.tab-btn:nth-child(4) {
   border-top-right-radius: var(--radius);
 }
 .tab-btn {

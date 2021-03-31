@@ -6,10 +6,22 @@ $(document).ready(function () {
     $("#accordion").accordion();
   });
 
+<<<<<<< HEAD
   // ********** selção data ************
   // Ano rodapé
   const date = document.getElementById("date");
   date.innerHTML = new Date().getFullYear();
+=======
+    // hide 
+
+    $(".property-card1").hide();
+
+
+    // ********** selção data ************
+    // Ano rodapé
+    const date = document.getElementById("date");
+    date.innerHTML = new Date().getFullYear();
+>>>>>>> 721ada0e004eb3d1a2b7be556658ef5e24521e3a
 
   // Data e hora Topo Pagina
 
@@ -108,9 +120,17 @@ $(document).ready(function () {
   });
 
 
+<<<<<<< HEAD
   // slideToggle
   $(".property-card").hide();
   $("#btn1").click(function () {
+=======
+    // Toggle
+    $(".property-card").hide();
+    $("#btn1").click(function () {
+
+        $(".property-card").toggle();
+>>>>>>> 721ada0e004eb3d1a2b7be556658ef5e24521e3a
 
     $(".property-card").slideToggle("fast");
 
@@ -134,6 +154,7 @@ $(document).ready(function () {
       elementBody.style.fontSize = fontSize + '%';
     });
 
+<<<<<<< HEAD
     // Evento de click para diminuir a fonte
     elementBtnDecreaseFont.addEventListener('click', function (event) {
       fontSize = fontSize - increaseDecrease;
@@ -295,6 +316,49 @@ $(document).ready(function () {
           */
   /*     return false;
   }); */
+=======
+    $("button").click(function () {
+
+        //declaração das variáveis
+        var leitosUTI = 0, leitosInfermaria = 0, media = 0;
+
+        //pegando os numeros de leitos dos campos inputs
+        leitosUTI = parseInt($("input[name=leitosUTI]").val());
+        leitosInfermaria = parseInt($("input[name=leitosInfermaria]").val());
+        //formula para cálculo de média
+        media = (leitosUTI + leitosInfermaria) / 2;
+        //mostra o resultado no input name=media
+        $("input[name=media]").val(media);
+        // retorna a média opós aparecer o card escolhigo
+        $("media").focus(function () {
+            if (media <= 59) {
+                document.getElementById("property-color2").innerHTML =
+                    this.responseText;
+                // console.log(media + "Fase1")
+            }
+            else if (media >= 60 && resultado <= 69) {
+                document.getElementById("property-color2").innerHTML =
+                    this.responseText;
+                //console.log(media + "Fase2")
+            }
+            else if (media >= 70 && media <= 79) {
+                document.getElementById("property-color3").innerHTML =
+                    this.responseText;
+                //console.log(media + "Fase3")
+            }
+            else if (media >= 80) {
+                document.getElementById("property-color4").innerHTML =
+                    this.responseText;
+                //console.log(media + "Fase4")
+            }
+        })
+        //".property-card1" // cards escondidos
+        //"#property-color1" 2,3,4 // cards por cor
+
+        //document.getElementById("property-color1")
+        //.querySelector('input[name="media"]').value = media;
+    });
+>>>>>>> 721ada0e004eb3d1a2b7be556658ef5e24521e3a
 
 });
 

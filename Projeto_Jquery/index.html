@@ -38,13 +38,16 @@
                 <div class="links-container">
                     <ul class="links">
                         <li>
-                            <a href="index.html" class="scroll-link">home</a>
+                            <a class="scroll-link" href="index.html">home</a>
                         </li>
                         <li>
-                            <a href="infoVacinas/infovacina.html" class="scroll-link">Vacinas e Ocupações de Leitos</a>
+                            <a class="scroll-link" href="infoVacinas/infovacina.html">Vacinas e leitos</a>
                         </li>
                         <li>
-                            <a href="quemSomos/quemSomos.html" class="scroll-link">Quem Somos</a>
+                            <a class="scroll-link" href="formVacina/formVacina.html">Formulário</a>
+                        </li>
+                        <li>
+                            <a class="scroll-link" href="quemSomos/quemSomos.html">Quem Somos</a>
                         </li>
                         <li>
                             <!-- acessibilidade visual -->
@@ -62,12 +65,11 @@
             <div class="container">
                 <h1>Informativo Coronavírus</h1>
                 <h3 id="SubtittleBaneer">Conteúdos sobre covid-19 para a Cidade de São Paulo</h3>
-                <p>
-                </p>
-                <a href="#cards" class="scroll-link btn btn-white">Informações </a>
-                <a href="#prevencao" class="scroll-link btn btn-white">Como se previnir </a>
-                <a href="infoVacinas/infovacina.html" class="scroll-link btn btn-white">Vacinas e Ocupações de Leitos
-                </a>
+
+                <a class="scroll-link btn btn-white" href="#cards">Informações </a>
+                <a class="scroll-link btn btn-white" href="#prevencao">Como se previnir </a>
+                <a class="scroll-link btn btn-white" href="formVacina/formVacina.html">Formulário</a>
+                <a class="scroll-link btn btn-white" href="infoVacinas/infovacina.html">Vacinas e Leitos</a>
             </div>
         </div>
     </header>
@@ -81,7 +83,7 @@
 
         <div class="center">
             <div class="property-card">
-                <a href="infoVacinas/infovacina.html">
+                <a href="formVacina/formVacina.html">
                     <div class="property-image">
                         <div class="property-image-title">
                             Saiba Mais
@@ -89,7 +91,7 @@
                     </div>
                 </a>
                 <div class="property-description">
-                    <h5> Ocupação de Leitos e Bandeira Vigente </h5>
+                    <h5> Formulário Vacinação </h5>
 
                 </div>
             </div>
@@ -103,7 +105,7 @@
                     </div>
                 </a>
                 <div class="property-description">
-                    <h5> Vacinas Emergenciais </h5>
+                    <h5> Vacinas e Ocupação de Leitos </h5>
 
                 </div>
 
@@ -168,10 +170,11 @@
                     <button class="tab-btn" data-id="vision">Prevenção</button>
                     <button class="tab-btn active" data-id="history">Sintomas</button>
                     <button class="tab-btn" data-id="goals">Tratamentos</button>
+                    <button class="tab-btn active" data-id="history2">Novos medicamentos</button>
                 </div>
                 <div class="about-content">
                     <!-- item 1 -->
-                    <div class="content" id="vision">
+                    <div class="content active" id="vision">
                         <h4>Protocolo de Combate adotados </h4>
                         <p>Proteja a si mesmo e as pessoas ao seu redor conhecendo os fatos e tomando as precauções
                             apropriadas. Siga os conselhos da autoridade local de saúde.</p><br>
@@ -186,7 +189,10 @@
                             <li>Procure atendimento médico se tiver febre, tosse e dificuldade para respirar.</li><br>
                             <p>Ligue com antecedência para o plano ou órgão de saúde e peça direcionamento à unidade
                                 mais adequada. Isso protege você e evita a propagação de vírus e outras infecções.
-                            </p>
+                            </p> <br>Saiba mais em
+                            <a
+                                href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/technical-guidance">OMS
+                                - Coronavirus</a>
 
 
                         </lu>
@@ -194,7 +200,7 @@
                     </div>
 
                     <!-- item 2-->
-                    <div class="content active" id="history">
+                    <div class="content" id="history">
 
                         <h4>Sintomas</h4>
                         <p>
@@ -222,7 +228,10 @@
                             <li>perda de fala ou movimento</li>
                         </lu><br>
                         <p>Procure atendimento médico imediato se tiver sintomas graves. Sempre ligue antes de ir ao
-                            médico ou posto de saúde, clínicas ou hospitais.</p>
+                            médico ou posto de saúde, clínicas ou hospitais.</p><br>
+                        Saiba mais em
+                        <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/technical-guidance">OMS
+                            - Coronavirus</a>
                     </div>
 
                     <!-- item 3-->
@@ -259,8 +268,39 @@
                                 dores no peito.</li>
                             <li>Mantenha contato com seus entes queridos por telefone ou on-line e faça exercícios para
                                 manter o pensamento positivo.</li>
-                        </lu>
+                        </lu><br>
+                        Saiba mais em
+                        <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/technical-guidance">OMS
+                            - Coronavirus</a>
 
+                    </div>
+                    <!-- item 4-->
+                    <div class="content" id="history2">
+                        <h4>Novos tratamentos em testes contra a covid-19</h4>
+                        <p><strong> Soro desenvolvido no Brasil</strong></p>
+                        <p>O soro, um líquido injetável rico em anticorpos contra o coronavírus, é destinado a pessoas
+                            já infectadas e busca frear o agravamento da doença, impedindo por exemplo que ela ataque o
+                            pulmão.</p>
+                        <p>Os testes com cobaias tiveram resultados "extremamente" efetivos, segundo o Butantan.</p>
+
+                        <p><strong> Antiviral inicia testes</strong></p>
+                        <p>egundo a empresa, o antiviral mostrou uma ação "potente" em testes in vitro no laboratório e
+                            é projetado para ser usado aos primeiros sintomas de covid-19.</p>
+                        <p> O medicamento da Pfizer é do tipo inibidor de protease — uma enzima essencial para o vírus
+                            se multiplicar.</p>
+
+                        <p><strong> Coquetel: metas atingidas na terceira fase</strong></p>
+                        <p>O coquetel, uma combinação das substâncias casirivimab e imdevimab com aplicação intravenosa,
+                            configura um tipo de tratamento chamado de anticorpos monoclonais — quando anticorpos de uma
+                            pessoa que se recuperou da doença são selecionados e copiados em laboratório.</p>
+
+                        <p><strong> Antiviral pode acelerar eliminação do vírus</strong></p>
+                        <p>as farmacêuticas MSD e Ridgeback apresentaram resultados preliminares de um ensaio clínico em
+                            fase 2 com o antiviral oral molnupiravir, envolvendo 202 pessoas infectadas com o
+                            coronavírus nos Estados Unidos e não hospitalizadas.</p>
+
+                        Saiba mais em <a href="https://www.bbc.com/portuguese/geral-56573200">BBC - novos
+                            tratamentos em testes contra a covid-19</a>
                     </div>
                 </div>
             </article>
@@ -283,46 +323,38 @@
             <div class="slider">
                 <div class="slide-track">
                     <div class="slide">
-                        <img src="img/leitos.jpeg" height="300" width="550" alt="" />
+                        <img src="img/vacinacao/1.jpg" height="300" width="550" alt="" />
                     </div>
                     <div class="slide">
-                        <img src="img/Tratamento.jpg" height="300" width="550" alt="" />
+                        <img src="img/vacinacao/2.jpg" height="300" width="550" alt="" />
                     </div>
                     <div class="slide">
-                        <img src="img/Vacinacao.jpg" height="300" width="550" alt="" />
+                        <img src="img/vacinacao/3.jpg" height="300" width="550" alt="" />
                     </div>
                     <div class="slide">
-                        <img src="img/protoloco.jpg" height="300" width="550" alt="" />
+                        <img src="img/vacinacao/4.jpg" height="300" width="550" alt="" />
                     </div>
                     <div class="slide">
-                        <img src="img/leitos.jpeg" height="300" width="550" alt="" />
+                        <img src="img/vacinacao/5.jpg" height="300" width="550" alt="" />
                     </div>
                     <div class="slide">
-                        <img src="img/Tratamento.jpg" height="300" width="550" alt="" />
+                        <img src="img/vacinacao/6.jpg" height="300" width="550" alt="" />
                     </div>
                     <div class="slide">
-                        <img src="img/Vacinacao.jpg" height="300" width="550" alt="" />
+                        <img src="img/vacinacao/7.jpg" height="300" width="550" alt="" />
                     </div>
                     <div class="slide">
-                        <img src="img/protoloco.jpg" height="300" width="550" alt="" />
+                        <img src="img/vacinacao/8.jpg" height="300" width="550" alt="" />
                     </div>
                     <div class="slide">
-                        <img src="img/leitos.jpeg" height="300" width="550" alt="" />
+                        <img src="img/vacinacao/9.jpg" height="300" width="550" alt="" />
                     </div>
                     <div class="slide">
-                        <img src="img/Tratamento.jpg" height="300" width="550" alt="" />
+                        <img src="img/vacinacao/10.jpg" height="300" width="550" alt="" />
                     </div>
-                    <div class="slide">
-                        <img src="img/Vacinacao.jpg" height="400" width="550" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="img/protoloco.jpg" height="400" width="550" alt="" />
-                    </div>
-
-
+                    < </div>
                 </div>
             </div>
-        </div>
 
 
 
