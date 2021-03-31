@@ -80,7 +80,8 @@ Scroll
 
 header {
   min-height: 20vh;
-  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)), url(../img/covid.png) 150px/auto no-repeat;
+  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
+  url('../img/banner_Covid_paginas.jpg') center/cover no-repeat;
 }
 
 #home {
@@ -118,4 +119,105 @@ header {
 
 .links a:hover {
   color: var(--clr-black);
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--clr-grey-1);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: var(--clr-secondary);
+}
+.logo {
+  height: 50px;
+}
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.show-links {
+  height: 200px;
+}
+.links a {
+  background: var(--clr-white);
+  color: var(--clr-grey-5);
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  transition: var(--transition);
+  font-weight: bold;
+  padding: 0.75rem 0;
+}
+.links a:hover {
+  color: var(--clr-grey-1);
+}
+@media screen and (min-width: 800px) {
+  nav {
+    background: transparent;
+  }
+  .nav-center {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links-container {
+    height: auto !important;
+  }
+  .links {
+    display: flex;
+  }
+  .links a {
+    background: transparent;
+    color: var(--clr-white);
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    transition: var(--transition);
+    margin: 0 1rem;
+    font-weight: bold;
+    padding: 0;
+  }
+  .links a:hover {
+    color: var(--clr-white);
+  }
+}
+
+/*  acessibilidade visual */
+
+#increase-font,
+#decrease-font{
+  margin: 0 5px;
+  text-transform: uppercase;
+  background: var(--clr-grey-1);
+  color: var(--clr-white);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  transition: var(--transition);
+  font-size: 0.825rem;
+  border: 2px solid var(--clr-white);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
 }

@@ -1,109 +1,180 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt=BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer/footer.css">
+  <link rel="icon" href="../img/cara.png" />
+  <link rel="stylesheet" href="../js/jquery-ui-1.12.1/jquery-ui.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>Quem Somos</title>
 
+  <title>Quem Somos</title>
 </head>
+
 <body>
-    <!--▲▼▲▼▲▼▲▼ NOSSO CLIENTE ▲▼▲▼▲▼▲▼ -->
-    <section id="nossoCliente" class="anime_inicial">
+  <header id="home">
+    <!-- menu -->
+    <nav id="nav">
+      <div class="nav-center">
+        <!-- logo e data e hora-->
+        <div class="nav-header">
+          <ul class="links">
+            <li>
+              <a class="scroll-link" id="dateTime"></a>
+            </li>
+          </ul>
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+
+        </div>
+        <div class="divMenu">
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="../index.html" class="scroll-link">home</a>
+              </li>
+              <li>
+                <a href="../infoVacinas/infovacina.html" class="scroll-link">Vacinas e Leitos</a>
+              </li>
+              <li>
+                <a class="scroll-link" href="../formVacina/formVacina.html">Formulário</a>
+              </li>
+              <li>
+                <a href="../quemSomos/quemSomos.html" class="scroll-link">Quem Somos</a>
+              </li>
+              <li>
+                <!-- acessibilidade visual -->
+                <button name="increase-font" id="increase-font" title="Aumentar fonte"><strong>A+</strong></button>
+                <button name="decrease-font" id="decrease-font" title="Diminuir fonte"><strong>A-</strong></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+    <section id="form">
+
+
+      <!--▲▼▲▼▲▼▲▼ NOSSO CLIENTE ▲▼▲▼▲▼▲▼ -->
+      <section id="nossoCliente" class="anime_inicial">
         <div class="texto">
-        <img src="../img/sp.png" id="prefeitura" align="right">
-        <h1 p id="nossoCliente2">Nosso Cliente:</h1>
-        <p id="nossoCliente3" align="left">
+          <img src="../img/logo_cidadeSP.png" id="prefeitura" align="right">
+          <h1 p id="nossoCliente2">Nosso Cliente:</h1>
+          <p id="nossoCliente3" align="left">
 
             São Paulo é uma das 27 unidades federativas do Brasil.<br>
             Está situado na Região Sudeste e tem por limites os<br>
             estados de Minas Gerais a norte e nordeste, Paraná a sul,<br>
             Rio de Janeiro a leste e Mato Grosso do Sul a oeste,<br> além do Oceano Atlântico a sudeste.<br>
             Para fins estudantil, o projeto é criar uma página em<br> relação ao corona vírus</p>
-</div>
-    </section>
+        </div>
+      </section>
 
 
-<section class="anime_inicial">
-    <h1 id="conheca">Conheça a nossa equipe:</h1>
-</section>
+      <section class="anime_inicial">
+        <h1 id="conheca">Conheça a nossa equipe:</h1>
+      </section>
 
-<!-- ▲▼▲▼▲▼▲▼ Descrição Sobre a Aline ▲▼▲▼▲▼▲▼-->
-    <section class="anime_inicial">
-    <div class="texto">
-     <article>
+      <!-- ▲▼▲▼▲▼▲▼ Descrição Sobre a Aline ▲▼▲▼▲▼▲▼-->
+      <section class="anime_inicial">
+        <div class="texto">
+          <article>
 
-      <p> <img src="img/Aline.png" id="alinefoto" align="left">
+            <p> <img src="img/Aline.png" id="alinefoto" align="left">
 
             <h2 id="aline1">Aline Martins</h2>
-                <h3 id="aline2">Aluna da SoulCode Academy </h3>
-                <p id="txt1"> Fundadora da empresa ZeroTech
-                   <br>
-                </p>
-                <p id="txt1">Nova na programação, mas com muito foco e muita ambição, realizou<br> diversos projetos, sendo eles (Site da TNT, um Site da SoulCode Academy)
-                    junto com a SoulCode Academy e está a demonstrar o seu<br> desempenho na prática.
+            <h3 id="aline2">Aluna da SoulCode Academy </h3>
+            <p id="txt1"> Fundadora da empresa ZeroTech
+              <br>
+            </p>
+            <p id="txt1">Nova na programação, mas com muito foco e muita ambição, realizou<br> diversos projetos, sendo
+              eles (Site da TNT, um Site da SoulCode Academy)
+              junto com a SoulCode Academy e está a demonstrar o seu<br> desempenho na prática.
 
-                </p>
-        </article>
-    </div>
-    </section>
+            </p>
+          </article>
+        </div>
+      </section>
 
-<!-- ▲▼▲▼▲▼▲▼Descrição Sobre o Guilherme ▲▼▲▼▲▼▲▼-->
-    <section class="anime_inicial">
-    <div class="texto">
-        <article>
+      <!-- ▲▼▲▼▲▼▲▼Descrição Sobre o Guilherme ▲▼▲▼▲▼▲▼-->
+      <section class="anime_inicial">
+        <div class="texto">
+          <article>
             <p> <img src="img/Gui.png" id="guifoto" align="right">
 
-                <h2 id="gui1">José Guilherme</h2>
-                <h3 id="gui2">Aluno da SoulCode Academy</h3><br>
-                <p id="txt3">Fundador da empresa ZeroTech
-                    <br>
-                </p>
-                <p id="txt3">Novo na programação, mas com muito foco e muita ambição, realizou<br> diversos projetos, sendo eles (Site da TNT, um Site da SoulCode Academy)
-                    junto com a SoulCode Academy e está a demonstrar o seu<br> desempenho na prática.
-                </p>
-        </article>
-    </div>
-    </section>
+            <h2 id="gui1">José Guilherme</h2>
+            <h3 id="gui2">Aluno da SoulCode Academy</h3><br>
+            <p id="txt3">Fundador da empresa ZeroTech
+              <br>
+            </p>
+            <p id="txt3">Novo na programação, mas com muito foco e muita ambição, realizou<br> diversos projetos, sendo
+              eles (Site da TNT, um Site da SoulCode Academy)
+              junto com a SoulCode Academy e está a demonstrar o seu<br> desempenho na prática.
+            </p>
+          </article>
+        </div>
+      </section>
 
-<!-- ▲▼▲▼▲▼▲▼ Descrição sobre Wallace ▲▼▲▼▲▼▲▼-->
+      <!-- ▲▼▲▼▲▼▲▼ Descrição sobre Wallace ▲▼▲▼▲▼▲▼-->
 
-    <section class="anime_inicial">
+      <section class="anime_inicial">
         <div class="texto">
-        <article>
+          <article>
             <p> <img src="img/wallace.png" id="wallacefoto" align="left" </p>
 
-                <h2 id="wallace1">Wallace Virginio</h2>
-                <h3 id="wallace2">Aluno da SoulCode Academy</h3>
-                <p id="txt5">Fundador da ZeroTech
-                <p id="txt5">Novo na programação, mas com muito foco e muita ambição, realizou<br> diversos projetos, sendo eles (Site da TNT, um Site da SoulCode Academy)
-                    junto com a SoulCode Academy e está a demonstrar o seu<br> desempenho na prática.<br>
-        </article>
-    </div>
-    </section>
-    </article>
+            <h2 id="wallace1">Wallace Virginio</h2>
+            <h3 id="wallace2">Aluno da SoulCode Academy</h3>
+            <p id="txt5">Fundador da ZeroTech
+            <p id="txt5">Novo na programação, mas com muito foco e muita ambição, realizou<br> diversos projetos, sendo
+              eles (Site da TNT, um Site da SoulCode Academy)
+              junto com a SoulCode Academy e está a demonstrar o seu<br> desempenho na prática.<br>
+          </article>
+        </div>
+      </section>
+      </article>
 
 
-<!-- ▲▼▲▼▲▼▲▼Quebra de Linha Improvisada ▲▼▲▼▲▼▲▼-->
-<br> 
-<br>
-<br>
+      <!-- ▲▼▲▼▲▼▲▼Quebra de Linha Improvisada ▲▼▲▼▲▼▲▼-->
+      <br>
+      <br>
+      <br>
 
-<!-- ▲▼▲▼▲▼▲▼Fala sobre a empresa ▲▼▲▼▲▼▲▼-->
-    <section class="anime_inicial">
+      <!-- ▲▼▲▼▲▼▲▼Fala sobre a empresa ▲▼▲▼▲▼▲▼-->
+      <section class="anime_inicial">
         <div class="texto">
-        <h1 id="empresaco">Nós Somos a ZeroTech!!</h1>
+          <h1 id="empresaco">Nós Somos a ZeroTech!!</h1>
 
-        <p id="txt6">A ZeroTech é uma empresa de tecnologia para pessoas inspiradas<br> e apaixonadas pelo mundo da tecnologia, fundada em 30/03/2021<br> por incríveis programadores, nós somos uma empresa futurista,<br> oferecemos diversos serviços, os mesmos como Websites, entre<br> outras aplicações.
+          <p id="txt6">A ZeroTech é uma empresa de tecnologia para pessoas inspiradas<br> e apaixonadas pelo mundo da
+            tecnologia, fundada em 30/03/2021<br> por incríveis programadores, nós somos uma empresa futurista,<br>
+            oferecemos diversos serviços, os mesmos como Websites, entre<br> outras aplicações.
+          </p>
+          <img src="img/zeroTech-removebg-preview.png" id="empresafoto">
+        </div>
+      </section>
+
+
+
+      <!-- footer -->
+      <footer class="section">
+        <p>
+          copyright &copy;Prefeitura de São Paulo
+          <span id="date"></span>. SoulCode Academy
         </p>
-        <img src="img/zeroTech-removebg-preview.png" id="empresafoto">
-    </div>
-    </section>
+      </footer>
 
-    
+      <script type="text/javascript" src="../quemSomos/javascript/java.js"></script>
 </body>
+
 </html>
-<script type="text/javascript" src="./javascript/java.js"></script>

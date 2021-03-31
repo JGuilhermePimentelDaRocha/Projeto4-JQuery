@@ -21,30 +21,46 @@
   <header id="home">
     <!-- menu -->
     <nav id="nav">
-      <div class="divMenu">
-        <!-- links -->
-        <div class="links-container">
+      <div class="nav-center">
+        <!-- logo e data e hora-->
+        <div class="nav-header">
           <ul class="links">
             <li>
-              <a href="../index.html" class="scroll-link">home</a>
-            </li>
-            <li>
-              <a href="../quemSomos/quemSomos.html" class="scroll-link">Quem Somos</a>
-            </li>
-            <li>
-              <a href="../infoVacinas/infoVacina.html" class="scroll-link">Vacinas e Protocolos</a>
-            </li>
-            <li>
-              <a href="../infoLeitos/infoLeito.html" class="scroll-link">Ocupação de Leitos</a>
-            </li>
-            <li>
-              <a href="../infoLeitos/infoLeito.html" class="scroll-link">Formulário de Vacinação</a>
+              <a class="scroll-link" id="dateTime"></a>
             </li>
           </ul>
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+
+        </div>
+        <div class="divMenu">
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="../index.html" class="scroll-link">home</a>
+              </li>
+              <li>
+                <a href="../infoVacinas/infovacina.html" class="scroll-link">Vacinas e Leitos</a>
+              </li>
+              <li>
+                <a class="scroll-link" href="../formVacina/formVacina.html">Formulário</a>
+              </li>
+              <li>
+                <a href="../quemSomos/quemSomos.html" class="scroll-link">Quem Somos</a>
+              </li>
+              <li>
+                <!-- acessibilidade visual -->
+                <button name="increase-font" id="increase-font" title="Aumentar fonte"><strong>A+</strong></button>
+                <button name="decrease-font" id="decrease-font" title="Diminuir fonte"><strong>A-</strong></button>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-
     </nav>
+
 
   </header>
 

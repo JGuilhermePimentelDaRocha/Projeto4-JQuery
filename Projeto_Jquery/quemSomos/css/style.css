@@ -153,7 +153,7 @@
 
 #guifoto {
 
-    background-color:#F9F8F8 ;
+    
     padding-top: 70px;
     width: 250px;
     height: 250px;
@@ -171,12 +171,12 @@
 }
 
 #gui2 {
-
+    float: right;
     font-size: 18px;
     color: #66a9cf;
-    display: inline-block;
-    padding-right: 23px;
-    float: right;
+    
+    padding-right: 62px;
+    
 }
 
 #txt3 {
@@ -198,8 +198,8 @@
 
     padding-left: 150px;
     padding-top: 100px;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     /* border-top-right-radius: 90px; */
 }
 
