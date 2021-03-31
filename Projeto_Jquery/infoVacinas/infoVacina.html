@@ -11,7 +11,7 @@
   <script src="js/jquery-ui-1.12.1.custom/jquery-ui.js"> </script>
 
   <!-- stilo -->
-  <link rel="icon" href="img/cara.png" />
+  <link rel="icon" href="../img/cara.png" />
   <!--<link rel="stylesheet" href="../css/header.css">-->
   <link rel="stylesheet" href="css/style2.css" />
 
@@ -22,27 +22,35 @@
     <!-- menu -->
     <nav id="nav">
       <div class="nav-center">
-        <!-- logo e navegador-->
+        <!-- logo e data e hora-->
         <div class="nav-header">
-          <img src="img/cara.png" class="logo" alt="logo" />
+          <ul class="links">
+            <li>
+              <a class="scroll-link" id="dateTime"></a>
+            </li>
+          </ul>
           <button class="nav-toggle">
             <i class="fas fa-bars"></i>
           </button>
+
         </div>
         <!-- links -->
         <div class="links-container">
+
           <ul class="links">
             <li>
-              <a href="#home" class="scroll-link">home</a>
+              <a href="index.html" class="scroll-link">home</a>
             </li>
             <li>
-              <a href="#cards" class="scroll-link">Ocupações de Leitos</a>
+              <a href="infoVacinas/infovacina.html" class="scroll-link">Vacinas e Ocupações de Leitos</a>
             </li>
             <li>
-              <a href="#prevencao" class="scroll-link">Vacinas</a>
+              <a href="quemSomos/quemSomos.html" class="scroll-link">Quem Somos</a>
             </li>
             <li>
-              <a href="#galeria" class="scroll-link">Quem Somos</a>
+              <!-- acessibilidade visual -->
+              <button name="increase-font" id="increase-font" title="Aumentar fonte"><strong>A+</strong></button>
+              <button name="decrease-font" id="decrease-font" title="Diminuir fonte"><strong>A-</strong></button>
             </li>
           </ul>
         </div>
@@ -55,10 +63,11 @@
 
   <section id="cards">
     <div class="title">
-      <h1>Vacinas</h1>
+      <h1>Vacinas e Ocupações de Leitos</h1>
+      <h2>Vacinas Covid-19</h2>
 
       <div id="accordion">
-        <h3>Aprovadas para Uso Emergencial no Brasil</h3>
+        <h2>Aprovadas para Uso Emergencial no Brasil</h2>
         <div class="cards-list">
 
           <div class="card 1">
@@ -76,7 +85,7 @@
           </div>
         </div>
 
-        <h3>Pedido de uso definitivo em andamento</h3>
+        <h2>Pedido de uso definitivo em andamento</h2>
         <div class="cards-list">
 
           <div class="card 1">
@@ -86,7 +95,7 @@
             </div>
           </div>
         </div>
-        <h3>Pedido de uso emergencial em andamento</h3>
+        <h2>Pedido de uso emergencial em andamento</h2>
         <div class="cards-list">
 
           <div class="card 1">
@@ -96,7 +105,7 @@
             </div>
           </div>
         </div>
-        <h3>EM Fase de Testes ou não solicitou uso no Brasil</h3>
+        <h2>EM Fase de Testes ou não solicitou uso no Brasil</h2>
         <div class="cards-list">
 
           <div class="card 1">
@@ -138,7 +147,7 @@
 
   <section id="prevencao" class="section">
 
-    <div class="title_cards">
+    <div class="title_cards"><br><br>
       <h1>Taxa de ocupação de Leitos - Atual</h1>
 
       <button id="btn1" class="btn first">Clique Aqui</button>
@@ -190,82 +199,91 @@
 
   <section id="galeria" class="section">
 
-
-
     <div class="title_cards">
-      <h1>Fases da retomada da economia </h1>
-      <input type="number" id="btn2" class="btn first"></input>
-      <input type="number" id="btn3" class="btn first"></input>
+      <h1>Fases da retomada da economia </h1><br></br>
 
-      <button>Clique Aqui</button>
+      <form name="calculo" method="post" action="">
+        Porcentagem de acupação de UTI
+        <input type="text" name="leitosUTI" value="" />
+
+        Porcentagem de acupação de Infermaria
+        <input type="text" name="leitosInfermaria" value="" />
+
+        Média
+        <input type="text" name="media" readonly="readonly" value="" />
+
+        <p>
+          <button class="btn first">Resultado</button>
+        </p>
+      </form>
+
     </div>
 
 
-    <span id="resultado">
-      <div class="center">
+    <div class="center">
 
 
-        <div class="property-card1" id="property-color1">
+      <div class="property-card1" id="property-color1">
 
-          <div class="property-image">
-            <div class="property-image-title">
-              A taxa de ocupação de Unidades de Terapia Intensiva (UTI) acima de 80%
-            </div>
-          </div>
-
-          <div class="property-description" id="description-color1">
-            <h5> Fase 1
-            </h5>
-
+        <div class="property-image">
+          <div class="property-image-title">
+            A taxa de ocupação de Unidades de Terapia Intensiva (UTI) acima de 80%
           </div>
         </div>
 
-        <div class="property-card1" id="property-color2">
+        <div class="property-description" id="description-color1">
+          <h5> Fase 1
+          </h5>
 
-          <div class="property-image">
-            <div class="property-image-title">
-              A taxa de ocupação de Unidades de Terapia Intensiva (UTI) entre 70% e 80%
-            </div>
-          </div>
-
-          <div class="property-description" id="description-color2">
-            <h5> Fase 2
-            </h5>
-
-          </div>
         </div>
-
-        <div class="property-card1" id="property-color3">
-
-          <div class="property-image">
-            <div class="property-image-title">
-              A taxa de ocupação de Unidades de Terapia Intensiva (UTI) entre 60% e 70%.
-            </div>
-          </div>
-
-          <div class="property-description" id="description-color3">
-            <h5> Fase 3
-            </h5>
-
-          </div>
-        </div>
-
-        <div class="property-card1" id="property-color4">
-
-          <div class="property-image">
-            <div class="property-image-title">
-              A taxa de ocupação de Unidades de Terapia Intensiva (UTI) abaixo de 60%
-            </div>
-          </div>
-
-          <div class="property-description" id="description-color4">
-            <h5> Fase 4
-            </h5>
-
-          </div>
-        </div>
-
       </div>
+
+      <div class="property-card1" id="property-color2">
+
+        <div class="property-image">
+          <div class="property-image-title">
+            A taxa de ocupação de Unidades de Terapia Intensiva (UTI) entre 70% e 80%
+          </div>
+        </div>
+
+        <div class="property-description" id="description-color2">
+          <h5> Fase 2
+          </h5>
+
+        </div>
+      </div>
+
+      <div class="property-card1" id="property-color3">
+
+        <div class="property-image">
+          <div class="property-image-title">
+            A taxa de ocupação de Unidades de Terapia Intensiva (UTI) entre 60% e 70%.
+          </div>
+        </div>
+
+        <div class="property-description" id="description-color3">
+          <h5> Fase 3
+          </h5>
+
+        </div>
+      </div>
+
+      <div class="property-card1" id="property-color4">
+
+        <div class="property-image">
+          <div class="property-image-title">
+            A taxa de ocupação de Unidades de Terapia Intensiva (UTI) abaixo de 60%
+          </div>
+        </div>
+
+        <div class="property-description" id="description-color4">
+          <h5> Fase 4
+          </h5>
+
+        </div>
+      </div>
+
+    </div>
 
   </section>
 
