@@ -7,9 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer/footer.css">
   <link rel="icon" href="../img/cara.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+  <link rel="stylesheet" href="./js/jquery-ui-1.12.1/jquery-ui.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
 
   <title>Formulário de Vacinação</title>
 </head>
@@ -18,7 +21,7 @@
   <header id="home">
     <!-- menu -->
     <nav id="nav">
-      <div class="divMenu">       
+      <div class="divMenu">
         <!-- links -->
         <div class="links-container">
           <ul class="links">
@@ -34,202 +37,204 @@
             <li>
               <a href="../infoLeitos/infoLeito.html" class="scroll-link">Ocupação de Leitos</a>
             </li>
+            <li>
+              <a href="../infoLeitos/infoLeito.html" class="scroll-link">Formulário de Vacinação</a>
+            </li>
           </ul>
         </div>
       </div>
-      
+
     </nav>
-    
+
   </header>
 
   <main>
-
-    <h1 id="tituloPrincipal">Formulário de Vacinação</h1>
-
     <section id="form">
-    <section class="caixa">
-      <div id="progressbar"></div>
+   
+        <div id="progressbar"></div>
+
+      <h3 class="tituloSection">Dados Pessoais</h3>
+
+      <section class="box dadosPessoais">
+        <div class="boxAdicional">
+          <label for="nome">Nome </label>
+          <input class="progresso" type="text" placeholder="Nome completo" id="nome">
+          <label for="dataNascimento">Data de nascimento </label>
+          <input class="progresso" type="date" id="dataNascimento">
+        </div>
+        <div class="boxAdicional">
+          <div>
+            <label for="etnia">Etnia</label>
+            <select class="progresso" name="etnia" id="etnia">
+              <option value="" disabled selected>Selecione</option>
+              <option value="amarelo">Amarelo(a)</option>
+              <option value="branco">Branco(a)</option>
+              <option value="indigena">Indígena</option>
+              <option value="pardo">Pardo(a)</option>
+              <option value="preto">Preto(a)</option>
+              <option value="naoInformado">Não informado</option>
+            </select>
+          </div>
+          <div id="boxSexo">
+            <h4 class="tituloSecundario">Sexo</h4>
+            <input class="inputSexo" name="sexo" type="radio" id="feminino" value="feminino">
+            <label for="feminino">Feminino</label>
+            <input class="inputSexo" name="sexo" type="radio" id="masculino" value="masculino">
+            <label for="masculino">Masculino</label>
+            <input class="inputSexo" name="sexo" type="radio" id="naoInformado" value="naoInformado">
+            <label for="naoInformado">Não Informado</label>
+          </div>
+          <div id="gestacao">
+            <h4 class="tituloSecundario">Está gestante?</h4>
+            <input class="progresso" type="radio" id="gestante" value="gestante">
+            <label for="gestante">Sim</label>
+            <input class="progresso" type="radio" id="naoGestante" value="naoGestante">
+            <label for="naoGestante">Não</label>
+          </div>
+        </div>
+        <div class="boxAdicional">
+          <div>
+            <label for="cpf">CPF </label>
+            <input class="progresso" type="text" id="cpf" placeholder="somente os números">
+          </div>
+          <div>
+            <label for="cartaoSus">Cartão do SUS </label>
+            <input class="progresso" type="number" id="cartaoSus" placeholder="xxxxxxxxxxxxxxx">
+          </div>
+          <div>
+            <label for="profissao">Profissão</label>
+            <input class="progresso" id="profissao">
+          </div>
+        </div>
+
+        <div>
+          <label for="sangue">Tipo Sanguíneo: </label>
+          <select class="progresso" name="sangue" id="sangue">
+            <option value="" disabled selected>Selecione</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="AB">AB</option>
+            <option value="O">O</option>
+            <option value="naoInformado">Não informado</option>
+          </select>
+        </div>
+        <div>
+          <label for="rh">Fator RH: </label>
+          <select class="progresso" id="rh">
+            <option value="" disabled selected>Selecione</option>
+            <option value="positivo">Positivo</option>
+            <option value="negativo">Negativo</option>
+          </select>
+        </div>
+        <div>
+          <label for="peso">Peso</label>
+          <input class="progresso" type="number" name="peso" id="peso">
+        </div>
+        <div>
+          <label for="altura">Altura</label>
+          <input class="progresso" type="number" name="altura" id="altura">
+        </div>
+        <div>
+          <label for="imc">IMC</label>
+          <input type="text" name="imc" id="imc" readonly>
+        </div>
+      </section>
+
+      <h3 class="tituloSection">Endereço</h3>
+
+      <section class="box endereco">
+        <div>
+          <label for="rua">Endereço</label>
+          <input class="progresso" type="text" id="rua" placeholder="Rua, número e complemento">
+        </div>
+        <div>
+          <label for="bairro">Bairro </label>
+          <input class="progresso" id="bairro">
+        </div>
+        <div>
+          <label for="cep">CEP: </label>
+          <input class="progresso" type="text" id="cep" pattern="\d{5}\-d{3}$" placeholder="xxxxx-xxx">
+        </div>
+      </section>
+
+      <h3 class="tituloSection">Contato</h3>
+
+      <section class="box contato">
+        <div>
+          <label for="telefone">Telefone: </label>
+          <input class="progresso" type="tel" pattern="^\d{2}-\d{5}-\d{4}$" id="telefone" placeholder="xx-xxxxx-xxxx">
+        </div>
+        <div>
+          <label for="email">E-mail: </label>
+          <input class="progresso" type="email" id="email" placeholder="seuemail@dominio.com">
+        </div>
+        <div>
+          <label for="telefone">Contato de Emergência</label>
+          <input class="progresso" type="tel" pattern="^\d{2}-\d{5}-\d{4}$" id="telefoneEmergencia" placeholder="xx-xxxxx-xxxx">
+        </div>
+      </section>
+
+      <h3 class="tituloSection">Vacinas e comorbidades</h3>
+
+      <section class="box vacinas">
+        <div>
+          <label for="vacinas">Vacinas Aplicadas </label>
+          <div>
+            <input type="checkbox" name="febreAmarela" id="febreAmarela">
+            <label for="febreAmarela">Febre Amarela</label>
+          </div>
+          <div>
+            <input type="checkbox" name="tuberculose" id="tuberculose">
+            <label for="tuberculose">Tuberculose (BCG)</label>
+          </div>
+          <div>
+            <input type="checkbox" name="sarampo" id="sarampo">
+            <label for="sarampo">Sarampo</label>
+          </div>
+          <div>
+            <input type="checkbox" name="rubeola" id="rubeola">
+            <label for="rubeola">Rubéola</label>
+          </div>
+          <div>
+            <input type="checkbox" name="hepatiteB" id="hepatiteB">
+            <label for="hepatiteB">Hepatite B</label>
+          </div>
+
+        </div>
+        <div>
+          <label for="comorbidades">Comorbidades </label>
+          <div>
+            <input type="checkbox" name="hipertensao" id="hipertensao">
+            <label for="hipertensao">Hipertensão</label>
+          </div>
+          <div>
+            <input type="checkbox" name="diabetes" id="diabetes">
+            <label for="diabetes">Diabetes</label>
+          </div>
+          <div>
+            <input type="checkbox" name="doencaCardio" id="doencaCardio">
+            <label for="doencaCardio">Doença Cardiovascular Crônica</label>
+          </div>
+          <div>
+            <input type="checkbox" name="obesidade" id="obesidade">
+            <label for="obesidade">Obesidade</label>
+          </div>
+          <div>
+            <input type="checkbox" name="outrasDoencas" id="outrasDoencas">
+            <label for="outrasDoencas">Informe outras doenças em observações</label>
+          </div>
+
+        </div>
+        <div class="obs">
+          <label for="nome">Observações: </label>
+          <textarea>Anotações adicionais</textarea>
+        </div>
+      </section>
+
+
+      <button id="btnEnviar">Enviar dados</button>
+
     </section>
-
-    <h3 class="tituloSection">Dados Pessoais</h3>
-
-    <section class="caixa">
-      <div>
-        <label for="nome">Nome </label>
-        <input type="text" placeholder="Nome completo">
-      </div>
-      <div>
-        <label for="dataNascimento">Data de nascimento </label>
-        <input type="date" id="dataNascimento">
-      </div>
-      <div>
-        <label for="etnia">Etnia</label>
-        <select name="etnia" id="etnia">
-          <option value="" disabled selected>Selecione</option>
-          <option value="amarelo">Amarelo(a)</option>
-          <option value="branco">Branco(a)</option>
-          <option value="indigena">Indígena</option>
-          <option value="pardo">Pardo(a)</option>
-          <option value="preto">Preto(a)</option>
-          <option value="naoInformado">Não informado</option>
-        </select>
-      </div>
-      <div>
-        <span>Sexo</span>
-        <input type="radio" id="feminino" value="feminino">
-        <label for="feminino">Feminino</label>
-        <input type="radio" id="masculino" value="masculino">
-        <label for="masculino">Masculino</label>
-        <input type="radio" id="naoInformado" value="naoInformado">
-        <label for="naoInformado">Não Informado</label>
-      </div>
-      <div>
-        <span>Está gestante?</span>
-        <input type="radio" id="gestante" value="gestante">
-        <label for="gestante">Sim</label>
-        <input type="radio" id="naoGestante" value="naoGestante">
-        <label for="naoGestante">Não</label>
-      </div>
-      <div>
-        <label for="cpf">CPF </label>
-        <input type="number" id="cpf" placeholder="xxxxxxxxxxx">
-      </div>
-      <div>
-        <label for="cartaoSus">Cartão do SUS </label>
-        <input type="number" id="cartaoSus" placeholder="xxxxxxxxxxxxxxx">
-      </div>
-      <div>
-        <label for="profissao">Profissão</label>
-        <input id="profissao">
-      </div>
-      <div>
-        <label for="sangue">Tipo Sanguíneo: </label>
-        <select name="sangue" id="sangue">
-          <option value="" disabled selected>Selecione</option>
-          <option value="A">A</option>
-          <option value="B">B</option>
-          <option value="AB">AB</option>
-          <option value="O">O</option>
-          <option value="naoInformado">Não informado</option>
-        </select>
-      </div>
-      <div>
-        <label for="rh">Fator RH: </label>
-        <input list="rh" placeholder="Selecione aqui">
-        <select id="rh">
-          <option value="Positivo">
-          <option value="Negativo">
-        </select>
-      </div>
-      <div>
-        <label for="peso">Peso</label>
-        <input type="number" name="peso" id="peso">
-      </div>
-      <div>
-        <label for="altura">Altura</label>
-        <input type="number" name="altura" id="altura">
-      </div>
-      <div>
-        <label for="imc">IMC</label>
-        <input type="text" name="imc" id="imc" readonly>
-      </div>
-    </section>
-
-    <h3 class="tituloSection">Endereço</h3>
-
-    <section class="caixa">
-      <div>
-        <label for="rua">Endereço</label>
-        <input type="text" id="rua" placeholder="Rua, número e complemento">
-      </div>
-      <div>
-        <label for="bairro">Bairro </label>
-        <input id="bairro">
-      </div>
-      <div>
-        <label for="cep">CEP: </label>
-        <input type="text" id="cep" pattern="\d{5}\-d{3}$" placeholder="xxxxx-xxx">
-      </div>
-    </section>
-
-    <h3 class="tituloSection">Contato</h3>
-
-    <section class="caixa">
-      <div>
-        <label for="telefone">Telefone: </label>
-        <input type="tel" pattern="^\d{2}-\d{5}-\d{4}$" id="telefone" placeholder="xx-xxxxx-xxxx">
-      </div>
-      <div>
-        <label for="email">E-mail: </label>
-        <input type="email" id="email" placeholder="seuemail@dominio.com">
-      </div>
-      <div>
-        <label for="telefone">Contato de Emergência</label>
-        <input type="tel" pattern="^\d{2}-\d{5}-\d{4}$" id="telefone" placeholder="xx-xxxxx-xxxx">
-      </div>
-    </section>
-
-    <h3 class="tituloSection">Vacinas e comorbidades</h3>
-
-    <section class="caixa">
-      <div>
-        <label for="vacinas">Vacinas Aplicadas </label>
-        <div>
-          <input type="checkbox" name="febreAmarela" id="febreAmarela">
-          <label for="febreAmarela">Febre Amarela</label>
-        </div>
-        <div>
-          <input type="checkbox" name="tuberculose" id="tuberculose">
-          <label for="tuberculose">Tuberculose (BCG)</label>
-        </div>
-        <div>
-          <input type="checkbox" name="sarampo" id="sarampo">
-          <label for="sarampo">Sarampo</label>
-        </div>
-        <div>
-          <input type="checkbox" name="rubeola" id="rubeola">
-          <label for="rubeola">Rubéola</label>
-        </div>
-        <div>
-          <input type="checkbox" name="hepatiteB" id="hepatiteB">
-          <label for="hepatiteB">Hepatite B</label>
-        </div>
-
-      </div>
-      <div>
-        <label for="comorbidades">Comorbidades </label>
-        <div>
-          <input type="checkbox" name="hipertensao" id="hipertensao">
-          <label for="hipertensao">Hipertensão</label>
-        </div>
-        <div>
-          <input type="checkbox" name="diabetes" id="diabetes">
-          <label for="diabetes">Diabetes</label>
-        </div>
-        <div>
-          <input type="checkbox" name="doencaCardio" id="doencaCardio">
-          <label for="doencaCardio">Doença Cardiovascular Crônica</label>
-        </div>
-        <div>
-          <input type="checkbox" name="obesidade" id="obesidade">
-          <label for="obesidade">Obesidade</label>
-        </div>
-        <div>
-          <input type="checkbox" name="outrasDoencas" id="outrasDoencas">
-          <label for="outrasDoencas">Informe outras doenças em observações</label>
-        </div>
-
-      </div>
-      <div class="obs">
-        <label for="nome">Observações: </label>
-        <textarea>Anotações adicionais</textarea>
-      </div>
-    </section>
-
-
-    <button class="btn">Enviar dados</button>
-
-  </section>
 
     <section id="bloco_confirmacao">
       <div id="boxConfirmacao">
@@ -237,16 +242,17 @@
       </div>
     </section>
   </main>
-    <!-- footer -->
-    <footer class="section">
-      <p>
-          copyright &copy;Prefeitura de São Paulo
-          <span id="date"></span>. SoulCode Academy
-      </p>
+
+  <!-- footer -->
+  <footer class="section">
+    <p>
+      copyright &copy;Prefeitura de São Paulo
+      <span id="date"></span>. SoulCode Academy
+    </p>
   </footer>
 
   <a class="scroll-link top-link" href="#home">
-      <i class="fas fa-arrow-up"></i>
+    <i class="fas fa-arrow-up"></i>
   </a>
 
   <script src="js/formVacina.js"></script>

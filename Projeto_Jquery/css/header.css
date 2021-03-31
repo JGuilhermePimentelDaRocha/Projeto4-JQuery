@@ -70,10 +70,6 @@ html {
   padding: 0;
 }
 
-main {
-  min-height: 100vh;
-}
-
 /*
 =============== 
 Scroll
@@ -84,16 +80,14 @@ Scroll
 
 header {
   min-height: 20vh;
-  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)), url(../../img/covid.png) 150px/auto no-repeat;
+  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)), url(../img/covid.png) 150px/auto no-repeat;
 }
 
 #home {
-  position: fixed;
   width: 100vw;
 }
 
 #nav {
-  background: transparent;
   padding-top: 2rem;
 }
 
@@ -110,7 +104,6 @@ header {
 }
 
 .links a {
-  background: transparent;
   color: var(--clr-white);
   font-size: 1.1rem;
   text-transform: capitalize;

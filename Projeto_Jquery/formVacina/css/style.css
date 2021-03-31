@@ -1,0 +1,48 @@
+main {
+  min-height: 100vh;
+}
+
+
+#form {
+  border: 1px solid;
+  margin-left: 5vw;
+  max-width: 50vw;
+  padding: 28vh 5px 5px 5px;
+}
+
+.tituloSection {
+  color: #343a40;
+}
+
+.box{
+  background: #e9ecef;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 0;
+  min-height: 30vh;
+  padding: 5px;
+}
+
+.boxAdicional {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  min-width: 48vw;
+}
+
+#boxSexo{
+  display: flex;
+}
+
+#nome {
+  width: 20vw;
+}
+
+.erro{
+  border-color: #fc9ca2;
+  background-color: #fc9ca2;
+}
+
