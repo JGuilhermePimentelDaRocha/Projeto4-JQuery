@@ -1,4 +1,10 @@
 $(document).ready(function () {
+
+    //accordion
+    $(function () {
+        $("#accordion").accordion();
+    });
+
     // ********** selção data ************
     // select span
     const date = document.getElementById("date");
@@ -79,47 +85,28 @@ $(document).ready(function () {
     });
 
 
-    //tab
+    // slideToggle
+    $(".property-card").hide();
+    $("#btn1").click(function () {
 
-    const about = document.querySelector(".about");
-    const btns = document.querySelectorAll(".tab-btn");
-    const articles = document.querySelectorAll(".content");
-    about.addEventListener("click", function (e) {
-        const id = e.target.dataset.id;
-        if (id) {
-            // remover selecionado de outros botões
-            btns.forEach(function (btn) {
-                btn.classList.remove("active");
-            });
-            e.target.classList.add("active");
-            // esconder outros artigos
-            articles.forEach(function (article) {
-                article.classList.remove("active");
-            });
-            const element = document.getElementById(id);
-            element.classList.add("active");
-        }
-    });
+        $(".property-card").slideToggle("fast");
 
-    // animação
-
-
-    function animeScroll() {
-        var disTopoScroll = $(document).scrollTop();
-        console.log(disTopoScroll);
-        $(".anime_inicial").each(function () {
-            itemTopo = $(this).offset().top
-            console.log(itemTopo);
-            if (disTopoScroll > itemTopo - 150) {
-                $(this).addClass("anime_final");
-            } else {
-                $(this).removeClass("anime_final");
-            }
-        })
-    }
-    animeScroll();
-    $(window).scroll(function () {
-        animeScroll();
     })
+
+    // focus - blur - 
+    $("#btn2, #btn3").focus(function (e) { // como em preciso retornar o conteudo coloco algum elemento na function
+        console.log("Recebeu o foco")
+        $("#btn2, #btn3").css("background-color", "#b7b7a4");// troca a cor 
+    })
+
+    // blur saio no formulario
+    $("#btn2, #btn3").blur(function (e) { // como em preciso retornar o conteudo coloco algum elemento na function
+        console.log("retirou o foco")
+        $("#btn2, #btn3").css("background-color", "white");// troca a cor 
+    })
+
+
+
+
 });
 
