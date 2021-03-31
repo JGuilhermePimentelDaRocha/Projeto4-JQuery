@@ -1,13 +1,4 @@
-/* Requisito jQuery UI - progressbar */
-
-$(document).ready(function () {
-   $(function () {
-    $("#progressbar").progressbar({
-      value: false
-    });
-  }); 
-  $('#gestacao').hide()
-})
+$('#gestacao').hide()
 
 /* Validação nome quantidade de caracteres*/
 
@@ -15,7 +6,7 @@ let nome = $('#nome')
 $('#nome').blur(function () { // requisito jQuery método de evento blur()
   if ((nome.val()).length < 5) {
     nome.addClass('erro')
-  } else {
+  } else if ((nome.val()).length > 5) {
     nome.removeClass('erro')
   }
 })
@@ -25,7 +16,7 @@ $('#nome').blur(function () { // requisito jQuery método de evento blur()
 let dataNascimento = $('#dataNascimento')
 $('#dataNascimento').blur(function () { // requisito jQuery método de evento blur()
   let idade = 2021 - parseFloat(dataNascimento.val())
-  if (idade > 130) {
+  if (idade > 130 || idade < 0) {
     dataNascimento.addClass('erro')
   } else {
     dataNascimento.removeClass('erro')
@@ -34,24 +25,17 @@ $('#dataNascimento').blur(function () { // requisito jQuery método de evento bl
 
 /* Validação de sexo e gestante */
 
-let sexo;
-
-$('.inputSexo').click(function () { // requisito jQuery método de evento click()
-
-  let sexo
-  if ($('#feminino:checked').val()) {
+$('#sexo').blur(function () { // requisito jQuery método de evento blur()
+  if ($('#sexo').val() == 'feminino') {
     $('#gestacao').show()
-    sexo = "feminino"
-  } else if ($('#masculino:checked').val()) {
-    sexo = "masculino"
-  } else if ($('#naoInformado:checked').val()) {
-    sexo = "não informado"
+  } else {
+    $('#gestacao').hide()
   }
 })
 
 /* Validador de CPF */
 
-$('#cpf').blur(function () {
+$('#cpf').blur(function () { // requisito jQuery método de evento blur()
   let cpfInput = $('#cpf')
   let cpfValue = $('#cpf').val()
   let soma = 0;
@@ -94,7 +78,7 @@ $('#cpf').blur(function () {
   return true;
 })
 
-/* Requisito AutoComplete(jQuery UI) Profissões */
+/* Requisito AutoComplete(jQuery UI) e requisito Profissões */
 
 $(function () {
   var profissoes = [
@@ -113,12 +97,13 @@ $(function () {
     "Técnico em informática", "Técnico em Radiologia", "Técnico em Segurança do Trabalho",
     "Terapeuta", "Veterinário", "Vigilante"
   ];
-  $('#profissao').autocomplete({
+  $('#outros').autocomplete({
     source: profissoes
   });
 });
 
-/* IMC */
+/* Requisito IMC */
+
 let altura
 let peso
 let imc;
@@ -129,44 +114,47 @@ $(function () {
   $('#altura').blur(function () {
     if (altura.val() > 3 || altura.val() < 0) {
       altura.addClass('erro')
-      console.log(altura.val())
     } else {
       altura.removeClass('erro')
-      console.log(altura.val())
     }
   })
 
   $('#peso').blur(function () {
     if (peso.val() > 300 || peso.val() <= 0) {
       peso.addClass('erro')
-      console.log(peso.val())
 
     } else {
       peso.removeClass('erro')
-      console.log(peso.val())
     }
   })
 
   $('#imc').focus(function () {
     imc = (peso.val() / (altura.val() * 2)).toFixed(2)
     if (imc <= 16.9) {
-      console.log(imc + " Muito abaixo do peso")
+      $('#imc').val(imc + " - Muito abaixo do peso")
       $('#obesidade').removeAttr('checked')
+
     } else if (imc >= 17 && imc <= 18.4) {
-      console.log(imc + " Abaixo do peso")
+      $('#imc').val(imc + " - Abaixo do peso")
       $('#obesidade').removeAttr('checked')
+
     } else if (imc >= 18.5 && imc <= 24.9) {
-      console.log(imc + " Peso normal")
+      $('#imc').val(imc + " - Peso normal")
       $('#obesidade').removeAttr('checked')
+
     } else if (imc >= 25 && imc <= 29.9) {
-      console.log(imc + " Acima do peso")
+      $('#imc').val(imc + " - Acima do peso")
       $('#obesidade').removeAttr('checked')
-    } else if (imc >= 30) {
+
+    } else if (imc >= 30 && imc <= 39.9) {
+      $('#imc').val(imc + " - Obesidade")
+      $('#obesidade').removeAttr('checked')
+
+    } else if (imc >= 40) {
+      $('#imc').val(imc + " - Obesidade Grave")
       $('#obesidade').attr("checked", "checked");
-      console.log(imc + " Obesidade")
     }
   })
-
 })
 
 /* Requisito AutoComplete(jQuery UI) Bairros*/
@@ -218,11 +206,83 @@ $('#email').blur(function () {
   } else {
     $('#email').addClass('erro')
   }
-  console.log(field)
 })
 
-/* Envia as informações do formulário para uma box 
-*/
-$('#btnEnviar').click(function(){
-  
-})
+
+/* Requisito barra de progresso */
+
+const inputs = document.querySelectorAll('.progress');
+const progress = document.querySelector('#progressbar');
+const segments = 100 / inputs.length;
+
+let fieldValues = [];
+
+const checkFields = () => {
+  var fieldsCompleted = 0;
+  var barWidth = 0;
+
+  for (let i = fieldValues.length; i--;) {
+    if (fieldValues[i] === true) {
+      fieldsCompleted += 1;
+    }
+  }
+
+  barWidth = fieldsCompleted * segments;
+  progress.style.width = barWidth + '%';
+  progress.innerHTML = `${barWidth.toFixed(0)}%`;
+
+  /* Envia as informações do formulário para uma box */
+
+  $('#btnEnviar').click(function () { // requisito jQuery método de evento click()
+    
+    let idade = 2021 - parseFloat(dataNascimento.val())
+    if (barWidth == 100) {
+      if ($('#profissao').val() == 'profissionalSaude' || idade >= 75) {
+        $('#confirmacaoDados').html("Você faz parte do grupo 1 e já pode se vacinar")
+
+      } else if ($('#etnia').val() == 'indigena' && idade >= 18) {
+        $('#confirmacaoDados').html("Você faz parte do grupo 1 e já pode se vacinar")
+
+      } else if (idade >= 60) {
+        $('#confirmacaoDados').html("Você faz parte do grupo 2 e já pode se vacinar")
+
+      } else if (idade >= 18) {
+        if ($('#hipertensao').is(':checked') || $('#hipertensao').is(':checked') ||
+          $('#hipertensao').is(':checked') || $('#hipertensao').is(':checked') ||
+          $('#hipertensao').is(':checked') || $('#hipertensao').is(':checked') ||
+          $('#hipertensao').is(':checked') || $('#hipertensao').is(':checked')) {
+
+          $('#confirmacaoDados').html("Você faz parte do grupo 3 e já pode se vacinar")
+
+        } else {
+          $('#confirmacaoDados').html("Você deve aguardar para a vacinação, acompanhe nosso site para mais informações")
+        }
+      } else if ($('#profissao').val() != 'outros' && $('#profissao').val() != 'profissionalSaude') {
+        $('#confirmacaoDados').html("Você faz parte do grupo 4 e já pode se vacinar")
+
+      } else {
+        $('#confirmacaoDados').html("Você deve aguardar para a vacinação, acompanhe nosso site para mais informações")
+      }
+
+    } else {
+      $('#confirmacaoDados').html("Você precisa preencher todos os campos")
+    }
+
+  })
+
+}
+
+for (let i = inputs.length; i--;) {
+  inputs[i].addEventListener('input', (event) => {
+    const currentInput = event.currentTarget;
+
+    if (!currentInput.value.length) {
+      fieldValues[i] = false;
+    } else {
+      fieldValues[i] = true;
+    }
+
+    checkFields();
+  });
+
+}

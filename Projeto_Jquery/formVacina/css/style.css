@@ -2,47 +2,75 @@ main {
   min-height: 100vh;
 }
 
-
 #form {
-  border: 1px solid;
   margin-left: 5vw;
-  max-width: 50vw;
-  padding: 28vh 5px 5px 5px;
+  max-width: 80vw;
+  padding: 10px;
 }
 
-.tituloSection {
+input, select {
+  height: 5vh;
+}
+
+input[type = "checkbox"]{
+  height: 2.5vh;
+}
+
+.tituloSection, .tituloSecundario {
+  margin: 5px 0;
   color: #343a40;
 }
 
-.box{
+.box {
   background: #e9ecef;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 10px 0;
-  min-height: 30vh;
-  padding: 5px;
+  padding: 10px;
 }
 
 .boxAdicional {
-  align-items: center;
+  align-items: flex-end;
   display: flex;
   justify-content: space-between;
-  margin: 5px 0;
-  min-width: 48vw;
+  margin: 10px 0;
+  min-width: 77vw;
 }
 
-#boxSexo{
-  display: flex;
+#nome, #rua, #profissao, #email {
+  width: 18vw;
 }
 
-#nome {
-  width: 20vw;
-}
-
-.erro{
+.erro {
   border-color: #fc9ca2;
   background-color: #fc9ca2;
 }
 
+.preencheuCerto {
+  border-color: #b5e48c;
+  background-color: #b5e48c;
+}
+
+#containerProgressbar {
+  width: 390px;
+  margin: 10px auto;
+  background: rgba(255, 255, 255, .2);
+}
+
+#progressbar {
+  width: 0px;
+  height: 20px;
+  background: #49f549;
+  transition: .5s ease;
+}
+
+#divBotao{
+  display: flex;
+  justify-content: center;
+}
+
+#btnEnviar{
+  font-size: 1.05rem;
+}
