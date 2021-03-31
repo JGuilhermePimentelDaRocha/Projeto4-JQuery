@@ -99,7 +99,7 @@ $(document).ready(function () {
     });
 
 
-    //tab
+    //tab 
 
     const about = document.querySelector(".about");
     const btns = document.querySelectorAll(".tab-btn");
@@ -123,7 +123,7 @@ $(document).ready(function () {
 
     // animação
 
-
+    /*
     function animeScroll() {
         var disTopoScroll = $(document).scrollTop();
         console.log(disTopoScroll);
@@ -140,7 +140,7 @@ $(document).ready(function () {
     animeScroll();
     $(window).scroll(function () {
         animeScroll();
-    })
+    })*/
 
     // declarações - Acessibilidade visual
 

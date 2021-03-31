@@ -5,6 +5,11 @@ $(document).ready(function () {
         $("#accordion").accordion();
     });
 
+    // hide 
+
+    $(".property-card1").hide();
+
+
     // ********** selção data ************
     // Ano rodapé
     const date = document.getElementById("date");
@@ -107,11 +112,11 @@ $(document).ready(function () {
     });
 
 
-    // slideToggle
+    // Toggle
     $(".property-card").hide();
     $("#btn1").click(function () {
 
-        $(".property-card").slideToggle("fast");
+        $(".property-card").toggle();
 
     })
 
@@ -140,131 +145,6 @@ $(document).ready(function () {
         });
     }
 
-    /*
-
-   // focus - blur - 
-   $("#btn2, #btn3").focus(function (e) { // como em preciso retornar o conteudo coloco algum elemento na function
-       console.log("Recebeu o foco")
-       $("#btn2, #btn3").css("background-color", "#b7b7a4");// troca a cor 
-   })
-
-   // blur saio no formulario
-   $("#btn2, #btn3").blur(function (e) { // como em preciso retornar o conteudo coloco algum elemento na function
-       console.log("retirou o foco")
-       $("#btn2, #btn3").css("background-color", "white");// troca a cor 
-   })
-
-    
-    // forma 1
-
-    
-
-    function calcular() {
-        var leitosUTI = parseInt(document.getElementById('leitosUTI').value, 10);
-        var leitosInfermaria = parseInt(document.getElementById('leitosInfermaria').value, 10);
-        document.getElementById('resultado').innerHTML = (leitosUTI + leitosInfermaria / 2);
-    }
-
-    
-
-  
-    function calcular() {
-        var leitosUTI = Number(document.getElementById("leitosUTI").value, 1);
-        var leitosInfermaria = Number(document.getElementById("leitosInfermaria").value, 1);
-        document.getElementById('resultado').value = leitosUTI + leitosInfermaria;
-    }
- 
-  
-    // forma2
-    var leitosUTI = $("#leitosUTI");
-    leitosUTI.blur(function () {
-        $("#resultado")
-    })
- 
-  // forma 3
-    var leitosInfermaria = $("#leitosInfermaria");
-    leitosInfermaria.blur(function () {
-        $("#resultado").html(leitosInfermaria.val() + leitosUTI.val() / (2))
-    })
- 
- 
-    // forma 4
-    var leitosInfermaria = $("#leitosUTI")
-     var leitosUTI = $("#leitosInfermaria")
-     var resultado;
- 
-     $("#resultado").focus(function () {
- 
-         resultado = ((leitosUTI.val() + leitosInfermaria.val()) / 2)
-         if (resultado <= 59) {
-             console.log(resultado + "Fase1")
-         }
-         else if (resultado >= 60 && resultado <= 69) {
-             console.log(resultado + "Fase2")
-         }
-         else if (resultado >= 70 && resultado <= 79) {
-             console.log(resultado + "Fase3")
-         }
-         else if (resultado >= 80) {
-             console.log(resultado + "Fase4")
-         }
-     })
-    
-    
- 
- 
- 
-     function media() {
-         var leitosInfermaria = parseFloat(document.getElementById("leitosInfermaria").value);
-         var leitosUTI = parseFloat(document.getElementById("leitosUTI").value);
- 
-         var resultado = (leitosInfermaria + leitosUTI) / 2;
- 
-         if (resultado <= 59) {
-             console.log(resultado + "Fase1")
-         }
-         else if (resultado >= 60 && resultado <= 69) {
-             console.log(resultado + "Fase2")
-         }
-         else if (resultado >= 70 && resultado <= 79) {
-             console.log(resultado + "Fase3")
-         }
-         else if (resultado >= 80) {
-             console.log(resultado + "Fase4")
-         }
- 
-     }
- 
-     
-
-    var leitosInfermaria = $("#leitosUTI")
-    var leitosUTI = $("#leitosInfermaria")
-    var resultado;
-
-    $("#resultado").click(function () {
-
-        resultado = (parseFloat(leitosUTI.val()) + parseFloat(leitosInfermaria.val())) / 2
-        console.log(parseFloat(leitosUTI).val())
-        console.log(leitosInfermaria)
-        console.log(leitosUTI + leitosInfermaria)
-        console.log(resultado)
-       
-        if (resultado <= 59) {
-            console.log(resultado + "Fase1")
-        }
-        else if (resultado >= 60 && resultado <= 69) {
-            console.log(resultado + "Fase2")
-        }
-        else if (resultado >= 70 && resultado <= 79) {
-            console.log(resultado + "Fase3")
-        }
-        else if (resultado >= 80) {
-            console.log(resultado + "Fase4")
-        }
-        })
-
-        */
-
     $("button").click(function () {
 
         //declaração das variáveis
@@ -275,24 +155,36 @@ $(document).ready(function () {
         leitosInfermaria = parseInt($("input[name=leitosInfermaria]").val());
         //formula para cálculo de média
         media = (leitosUTI + leitosInfermaria) / 2;
-
         //mostra o resultado no input name=media
         $("input[name=media]").val(media);
+        // retorna a média opós aparecer o card escolhigo
+        $("media").focus(function () {
+            if (media <= 59) {
+                document.getElementById("property-color2").innerHTML =
+                    this.responseText;
+                // console.log(media + "Fase1")
+            }
+            else if (media >= 60 && resultado <= 69) {
+                document.getElementById("property-color2").innerHTML =
+                    this.responseText;
+                //console.log(media + "Fase2")
+            }
+            else if (media >= 70 && media <= 79) {
+                document.getElementById("property-color3").innerHTML =
+                    this.responseText;
+                //console.log(media + "Fase3")
+            }
+            else if (media >= 80) {
+                document.getElementById("property-color4").innerHTML =
+                    this.responseText;
+                //console.log(media + "Fase4")
+            }
+        })
+        //".property-card1" // cards escondidos
+        //"#property-color1" 2,3,4 // cards por cor
 
-        /*if (media <= 59) {
-            console.log(media + "Fase1")
-        }
-        else if (media >= 60 && resultado <= 69) {
-            console.log(media + "Fase2")
-        }
-        else if (media >= 70 && media <= 79) {
-            console.log(media + "Fase3")
-        }
-        else if (media >= 80) {
-            console.log(media + "Fase4")
-        }
-        */
-        return false;
+        //document.getElementById("property-color1")
+        //.querySelector('input[name="media"]').value = media;
     });
 
 });
