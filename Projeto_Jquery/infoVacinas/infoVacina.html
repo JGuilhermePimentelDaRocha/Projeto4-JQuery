@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Informativo Coronavírus</title>
   <!-- font-->
-  <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom//jquery-ui.css" />
-  <script src="js/jquery-ui-1.12.1.custom/external/jquery/jquery.js"> </script>
-  <script src="js/jquery-ui-1.12.1.custom/jquery-ui.js"> </script>
+  
+  <link rel="stylesheet" href="../js/jquery-ui-1.12.1/jquery-ui.css">
+  <script src="../js/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+  <script src="../js/jquery-ui-1.12.1/jquery-ui.js"></script>
 
   <!-- stilo -->
   <link rel="icon" href="../img/cara.png" />
   <!--<link rel="stylesheet" href="../css/header.css">-->
-  <link rel="stylesheet" href="css/style2.css" />
+  <link rel="stylesheet" href="./css/style2.css" />
 
 </head>
 
@@ -61,7 +63,7 @@
   </header>
   <!-- Section1 -->
 
-  <section id="cards">
+ <section id="cards">
     <div class="title">
       <h1>Vacinas e Ocupações de Leitos</h1>
       <h2>Vacinas Covid-19</h2>
@@ -202,20 +204,18 @@
     <div class="title_cards">
       <h1>Fases da retomada da economia </h1><br></br>
 
-      <form name="calculo" method="post" action="">
-        Porcentagem de acupação de UTI
-        <input type="text" name="leitosUTI" value="" />
+       <label for="leitosUTI">Porcentagem de acupação de UTI</label> 
+        <input type="text" name="leitosUTI"/>
 
-        Porcentagem de acupação de Infermaria
-        <input type="text" name="leitosInfermaria" value="" />
+        <label for="leitosInfermaria">Porcentagem de acupação de Infermaria</label>
+        <input type="text" name="leitosInfermaria"/>
 
-        Média
-        <input type="text" name="media" readonly="readonly" value="" />
+        <label for="media">Média</label>
+        <input type="text" name="media" readonly="readonly"/>
 
         <p>
-          <button class="btn first">Resultado</button>
+          <button class="btn first" id="buttonResult">Resultado</button>
         </p>
-      </form>
 
     </div>
 
@@ -299,7 +299,7 @@
     <i class="fas fa-arrow-up"></i>
   </a>
   <!-- javascript -->
-  <script src="js/infoVacinas.js"></script>
+  <script src="./js/infoVacinas.js"></script>
 
 </body>
 
