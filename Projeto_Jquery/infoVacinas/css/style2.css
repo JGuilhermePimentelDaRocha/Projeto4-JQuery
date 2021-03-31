@@ -329,7 +329,7 @@ nav {
 
 /* hero */
 header {
-  min-height: 40vh;
+  min-height: 20vh;
   background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
   url('../../img/banner_Covid_paginas.jpg') center/cover no-repeat;
 }
@@ -403,6 +403,8 @@ accordion
 
 #accordion{
   margin: 0 100px;
+  background: var(--clr-white);
+
   
 }
 
