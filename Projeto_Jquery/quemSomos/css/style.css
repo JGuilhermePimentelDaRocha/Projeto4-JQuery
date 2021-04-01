@@ -58,7 +58,7 @@ body {
 #prefeitura{
 
     position: absolute;
-    left: 780px;
+    left: 980px;
     width: 300px;
     
     
@@ -99,8 +99,8 @@ body {
 
 #empresafoto{
 
-    width: 250px;
-    height: 250px;
+    width: 450px;
+    height: 450px;
     margin-left: 490px;
     padding-right: 100px;
 }
@@ -125,7 +125,7 @@ body {
 
     padding-left: 120px;
     padding-top: 30px;
-    width: 250px;
+    width: 270px;
     height: 245px;
     /* border-radius: 50px 20px; */
 }
