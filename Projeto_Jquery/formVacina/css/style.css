@@ -71,9 +71,17 @@ input[type = "checkbox"]{
 }
 
 #boxConfirmacao{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 3vh auto;
   height: 20vh;
   width: 40vw;
   background: #e9ecef;
   border-radius: 5px;
+}
+
+#confirmacaoDados{
+  color: #343a40;
+  font-size: 1.25rem;
 }
