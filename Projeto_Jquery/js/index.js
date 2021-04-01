@@ -74,12 +74,13 @@ $(document).ready(function () {
             // evitar padrão
             e.preventDefault();
             // navegue para um local específico
-            const id = e.currentTarget.getAttribute("href").slice(1);
             const element = document.getElementById(id);
+            const id = e.currentTarget.getAttribute("href").slice(1);
+            //
 
             const navHeight = navbar.getBoundingClientRect().height;
             const containerHeight = linksContainer.getBoundingClientRect().height;
-            const fixedNav = navbar.classList.contains("fixed-nav");
+            //const fixedNav = navbar.classList.contains("fixed-nav");
             let position = element.offsetTop - navHeight;
 
             if (!fixedNav) {
