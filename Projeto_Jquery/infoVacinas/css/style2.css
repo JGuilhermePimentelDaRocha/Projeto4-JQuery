@@ -169,6 +169,7 @@ p {
   border-radius: 0;
   padding: 0.5rem 1rem;
 }
+
 .btn:hover {
   background: var(--clr-white);
   color: var(--clr-secondary);
