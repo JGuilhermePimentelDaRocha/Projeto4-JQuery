@@ -42,10 +42,10 @@
                 <a href="../index.html" class="scroll-link">home</a>
               </li>
               <li>
-                <a href="../infoVacinas/infovacina.html" class="scroll-link">Vacinas e Leitos</a>
+                <a href="../infoVacinas/infoVacina.html" class="scroll-link">Vacinas e Leitos</a>
               </li>
               <li>
-                <a class="scroll-link" href="../formVacina/formVacina.html">Formulário</a>
+                <a class="scroll-link" href="./formVacina.html">Formulário</a>
               </li>
               <li>
                 <a href="../quemSomos/quemSomos.html" class="scroll-link">Quem Somos</a>
@@ -83,7 +83,7 @@
 
           <div>
             <label for="cartaoSus">Cartão do SUS </label>
-            <input class="progress" type="text" id="cartaoSus" placeholder="apenas números">
+            <input class="progress" type="text" id="cartaoSus" placeholder="somente os números">
           </div>
           <div>
             <label for="cpf">CPF </label>
@@ -164,13 +164,13 @@
           </div>
           <div>
             <label for="cep">CEP: </label>
-            <input class="progress" type="text" id="cep" pattern="\d{5}\-d{3}$" placeholder="xxxxx-xxx">
+            <input class="progress" type="text" id="cep" required="required" pattern= "\d{5}-?\d{3}" placeholder="xxxxx-xxx">
           </div>
         </div>
         <div class="boxAdicional">
           <div>
             <label for="telefone">Telefone: </label>
-            <input class="progress" type="tel" pattern="^\d{2}-\d{5}-\d{4}$" id="telefone" placeholder="xx-xxxxx-xxxx">
+            <input class="progress" type="tel" required="required" pattern="^\d{2}-\d{5}-\d{4}$" id="telefone" placeholder="xx-xxxxx-xxxx">
           </div>
           <div>
             <label for="email">E-mail: </label>

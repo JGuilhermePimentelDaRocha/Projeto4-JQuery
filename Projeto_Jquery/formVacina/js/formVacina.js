@@ -2,6 +2,38 @@ $(document).ready(function () {
   $('#gestacao, #boxConfirmacao').hide()
 })
 
+/* Validações gerais */
+
+$('#nome, #outros, #bairro').keydown(function (elemento) {
+  if (elemento.keyCode >= 48 && elemento.keyCode <= 57 ||
+    elemento.keyCode >= 96 && elemento.keyCode <= 105) {
+    return false
+  }
+})
+
+$('#cartaoSus, #cpf').keydown(function (elemento) {
+
+  if (elemento.keyCode >= 48 && elemento.keyCode <= 57 ||
+    elemento.keyCode >= 96 && elemento.keyCode <= 105 ||
+    elemento.keyCode == 8 || elemento.keyCode == 46) {
+    return true
+  } else {
+    return false
+  }
+})
+
+$('#cep, #telefone').keydown(function (elemento) {
+
+  if (elemento.keyCode >= 48 && elemento.keyCode <= 57 ||
+    elemento.keyCode >= 96 && elemento.keyCode <= 105 ||
+    elemento.keyCode == 8 || elemento.keyCode == 46
+    || elemento.keyCode == 109 || elemento.keyCode == 189) {
+    return true
+  } else {
+    return false
+  }
+})
+
 
 /* Validação nome quantidade de caracteres*/
 
@@ -13,6 +45,7 @@ $('#nome').blur(function () { // requisito jQuery método de evento blur()
     nome.removeClass('erro')
   }
 })
+
 
 /* Validação de idade */
 
@@ -211,7 +244,6 @@ $('#email').blur(function () {
   }
 })
 
-
 /* Requisito barra de progresso */
 
 const inputs = document.querySelectorAll('.progress');
@@ -277,8 +309,9 @@ const checkFields = () => {
         $('#confirmacaoDados').html("Você deve aguardar para a vacinação, acompanhe nosso site para mais informações")
       }
     } else {
-      $('#boxConfirmacao').fadeIn('slow').addClass('erro')
+      $('#boxConfirmacao').fadeIn('slow')
       $('#confirmacaoDados').html("Você precisa preencher todos os campos")
+
     }
 
   })
