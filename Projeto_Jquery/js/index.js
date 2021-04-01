@@ -100,7 +100,7 @@ $(document).ready(function () {
     });
 
 
-    //tab 
+    /* Requisito Tab (jQuery UI)  */
 
     const about = document.querySelector(".about");
     const btns = document.querySelectorAll(".tab-btn");

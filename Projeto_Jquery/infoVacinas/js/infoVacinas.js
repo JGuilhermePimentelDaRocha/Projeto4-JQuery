@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    //accordion
+    /* Requisito Accordion (jQuery UI) e requisito  */
     $(function () {
         $("#accordion").accordion();
     });

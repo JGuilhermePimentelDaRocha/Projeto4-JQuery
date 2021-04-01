@@ -439,7 +439,7 @@ accordion
   width: 1400px;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .container .card {
@@ -763,6 +763,7 @@ Footer
 footer {
   background: var(--clr-grey-1);
   padding: 5rem 1rem;
+ 
 }
 footer p {
   color: var(--clr-white);
@@ -770,10 +771,15 @@ footer p {
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   margin-bottom: 0;
+  
+}
+
+#footersize{
+  font-size: 2.25rem;
 }
 
 .top-link {
-  font-size: 1.25rem;
+  font-size: 2.25rem;
   position: fixed;
   bottom: 3rem;
   right: 3rem;

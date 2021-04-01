@@ -163,7 +163,7 @@ $(function () {
       peso.removeClass('erro')
     }
   })
-
+  // requisito jQuery método de evento Focus()
   $('#imc').focus(function () {
     imc = (peso.val() / (altura.val() * 2)).toFixed(2)
     if (imc <= 16.9) {
@@ -273,16 +273,16 @@ const checkFields = () => {
     let idade = 2021 - parseFloat(dataNascimento.val())
     if (barWidth == 100) {
       if ($('#profissao').val() == 'profissionalSaude' || idade >= 75) {
-        $('#boxConfirmacao').fadeIn('slow')
+        $('#boxConfirmacao').fadeIn('slow') // requisito jQuery método de evento fadeIn()
         $('#confirmacaoDados').html("Você faz parte do grupo 1 e já pode se vacinar")
 
       } else if ($('#etnia').val() == 'indigena' && idade >= 18) {
-        $('#boxConfirmacao').fadeIn('slow')
+        $('#boxConfirmacao').fadeIn('slow')// requisito jQuery método de evento fadeIn()
 
         $('#confirmacaoDados').html("Você faz parte do grupo 1 e já pode se vacinar")
 
       } else if (idade >= 60) {
-        $('#boxConfirmacao').fadeIn('slow')
+        $('#boxConfirmacao').fadeIn('slow')// requisito jQuery método de evento fadeIn()
 
         $('#confirmacaoDados').html("Você faz parte do grupo 2 e já pode se vacinar")
 
