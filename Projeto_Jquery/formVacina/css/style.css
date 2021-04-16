@@ -31,17 +31,7 @@ input[type = "checkbox"]{
   padding: 10px;
 }
 
-.boxAdicional {
-  align-items: flex-end;
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 0;
-  min-width: 77vw;
-}
 
-#nome, #rua, #profissao, #email {
-  width: 18vw;
-}
 
 .erro {
   border-color: #fc9ca2;
